@@ -10,7 +10,9 @@ App hermana de [CodeLock para Android](https://github.com/davidsant7e/codelock-a
 - **Pregunta al desbloquear Windows** (Win+L y volver), si pasaron al menos 5 minutos desde la última.
 - **No molesta**: no pregunta si estás en pantalla completa (juego, video, presentación), con "No molestar" activo, con la sesión bloqueada o si llevas más de 5 minutos sin tocar el PC.
 - **Elige bien la pregunta**: primero las que nunca viste, repite más las que fallaste, no repite las últimas 10.
-- **Responde con el teclado**: `1`–`6` (o `A`–`F`) para elegir, `Esc` para cerrar o saltar, `Enter` para cerrar, `N` para otra.
+- **Responde con el teclado**: `1`–`6` (o `A`–`F`) para elegir, `0` para **No sé**, `Esc` para cerrar o saltar, `Enter` para cerrar, `N` para otra, `D` para ver la documentación.
+- **No sé**: muestra la respuesta y la explicación sin bajar tu porcentaje de aciertos; la pregunta vuelve pronto, como una fallada.
+- **De dónde sale**: después de responder, la fuente de la pregunta (y de qué archivo `.json` salió) con el botón **Ver documentación**, que la abre en tu navegador. Si la pregunta no trae enlace, el botón es **Buscar en la web**.
 - Ícono del arcano **V · El Hierofante** (dos llaves cruzadas) junto al reloj, con menú: *Pregunta ahora* (o doble clic), *Frecuencia*, *Preguntar al desbloquear*, *Pausar 1 hora*, *Estadísticas*, *Abrir carpeta de preguntas*, *Recargar preguntas*, *Salir*.
 
 No instala nada: lo compila el compilador de C# que ya trae Windows (.NET Framework 4) a un `.exe` pequeño en `%LOCALAPPDATA%\CodeLock`. Queda abierto solo ese `.exe` (unos pocos MB de RAM), no PowerShell.
@@ -37,7 +39,9 @@ Están en la carpeta `preguntas\`. Cada archivo `.json` es un banco en el **mism
           "options": ["var", "val", "let", "const"],
           "correct": 1,
           "explanation": "val es de solo lectura; var se puede reasignar.",
-          "difficulty": 1 }
+          "difficulty": 1,
+          "source": "Documentación de Kotlin · Variables",
+          "sourceUrl": "https://kotlinlang.org/docs/basic-syntax.html#variables" }
       ] }
   ]
 }
@@ -45,6 +49,7 @@ Están en la carpeta `preguntas\`. Cada archivo `.json` es un banco en el **mism
 
 - `correct` es la posición de la opción correcta, empezando en 0.
 - Entre 2 y 6 opciones.
+- `source` y `sourceUrl` son opcionales: de dónde sale la pregunta y el enlace a la documentación.
 - Agrega archivos nuevos (por ejemplo `ingles.json`) y usa *Recargar preguntas* en el menú. Las preguntas repetidas se ignoran.
 
 ## Dónde guarda las cosas

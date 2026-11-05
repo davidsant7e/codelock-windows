@@ -136,6 +136,25 @@ static class CoreTests
         Check(nuevo.Respondidas == 0 && File.Exists(ruta + ".dañado"), "archivo dañado: empieza de cero y guarda copia");
         Check(Almacen.Cargar<Ajustes>(Path.Combine(tmp, "no-existe.json")).CadaMinutos == 30, "ajustes por defecto: cada 30 min");
 
+        // --- "no sé" y "de dónde sale" ---
+        Check(reales.All(p => p.Fuente.Length > 0 && Enlaces.EsWeb(p.FuenteUrl)), "las 32 preguntas del banco traen fuente y enlace");
+        Check(reales.All(p => p.Archivo == "programacion.json"), "cada pregunta sabe de qué archivo salió");
+        var conFuente = reales.First(p => p.Categoria == "Git");
+        Check(Enlaces.Para(conFuente) == conFuente.FuenteUrl, "ver documentación usa el enlace de la pregunta");
+        var sinFuente = new Pregunta { Categoria = "Git", Enunciado = "¿Qué hace git stash?", FuenteUrl = Enlaces.Limpiar("javascript:alert(1)") };
+        var busqueda = Enlaces.Para(sinFuente);
+        Check(sinFuente.FuenteUrl == null && busqueda.StartsWith("https://www.google.com/search?q=Git+%C2%BFQu%C3%A9+hace+git+stash%3F"), "sin enlace válido busca en la web: " + busqueda);
+        Check(Enlaces.Limpiar("  https://git-scm.com/book/es/v2 ") == "https://git-scm.com/book/es/v2", "limpia espacios del enlace");
+        var hn = new Historial();
+        hn.NoSabia(dos[0].Id, ahora);
+        Check(hn.NoSe == 1 && hn.Respondidas == 0 && hn.Aciertos == 0, "no sé no cuenta en el porcentaje");
+        Check(hn.Estado(dos[0].Id).Fallos == 1 && Selector.Peso(hn.Estado(dos[0].Id), ahora) > Selector.Peso(new EstadoPregunta { Veces = 1 }, ahora), "no sé hace que vuelva pronto");
+        Almacen.Guardar(ruta, hn);
+        Check(Almacen.Cargar<Historial>(ruta).NoSe == 1, "contador de no sé guardado");
+        var viejo = Path.Combine(tmp, "viejo.json");
+        File.WriteAllText(viejo, "{\"respondidas\":3,\"aciertos\":2}");
+        Check(Almacen.Cargar<Historial>(viejo).NoSe == 0 && Almacen.Cargar<Historial>(viejo).Respondidas == 3, "historial de la versión anterior se lee bien");
+
         Directory.Delete(tmp, true);
         Console.WriteLine("ok=" + ok + " fallos=" + fallos);
         return fallos == 0 ? 0 : 1;

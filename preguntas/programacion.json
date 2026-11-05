@@ -9,14 +9,18 @@
           "options": ["O(1)", "O(log n)", "O(n)", "O(n log n)"],
           "correct": 1,
           "explanation": "En cada paso se descarta la mitad de los elementos que quedan.",
-          "difficulty": 1
+          "difficulty": 1,
+          "source": "Wikipedia · Búsqueda binaria",
+          "sourceUrl": "https://es.wikipedia.org/wiki/B%C3%BAsqueda_binaria"
         },
         {
           "statement": "¿Qué estructura de datos sigue el principio LIFO (el último en entrar es el primero en salir)?",
           "options": ["Cola", "Pila", "Árbol", "Tabla hash"],
           "correct": 1,
           "explanation": "En una pila se saca primero lo último que se puso, como una pila de platos.",
-          "difficulty": 1
+          "difficulty": 1,
+          "source": "Wikipedia · Pila (informática)",
+          "sourceUrl": "https://es.wikipedia.org/wiki/Pila_(inform%C3%A1tica)"
         },
         {
           "statement": "¿Qué significa que una función sea \"pura\"?",
@@ -28,14 +32,18 @@
           ],
           "correct": 1,
           "explanation": "Una función pura no depende de nada externo ni modifica nada fuera de ella; por eso es fácil de probar.",
-          "difficulty": 1
+          "difficulty": 1,
+          "source": "Wikipedia · Pure function (en inglés)",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Pure_function"
         },
         {
           "statement": "¿Cuál es el costo promedio de buscar una clave en una tabla hash bien distribuida?",
           "options": ["O(1)", "O(log n)", "O(n)", "O(n²)"],
           "correct": 0,
           "explanation": "La función hash lleva directo a la posición; solo las colisiones agregan trabajo extra.",
-          "difficulty": 2
+          "difficulty": 2,
+          "source": "Wikipedia · Tabla hash",
+          "sourceUrl": "https://es.wikipedia.org/wiki/Tabla_hash"
         },
         {
           "statement": "En una función recursiva, ¿qué es el \"caso base\"?",
@@ -47,14 +55,18 @@
           ],
           "correct": 1,
           "explanation": "Sin caso base la función se llamaría a sí misma sin fin hasta desbordar la pila.",
-          "difficulty": 1
+          "difficulty": 1,
+          "source": "Wikipedia · Recursion (computer science) (en inglés)",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Recursion_(computer_science)"
         },
         {
           "statement": "¿Qué principio SOLID dice que una clase debería tener una sola razón para cambiar?",
           "options": ["Abierto/cerrado", "Sustitución de Liskov", "Responsabilidad única", "Inversión de dependencias"],
           "correct": 2,
           "explanation": "Responsabilidad única: cada clase se encarga de una sola cosa.",
-          "difficulty": 2
+          "difficulty": 2,
+          "source": "Wikipedia · SOLID",
+          "sourceUrl": "https://es.wikipedia.org/wiki/SOLID"
         }
       ]
     },
@@ -71,7 +83,9 @@
           ],
           "correct": 1,
           "explanation": "val es una referencia de solo lectura; var se puede reasignar.",
-          "difficulty": 1
+          "difficulty": 1,
+          "source": "Documentación de Kotlin · Variables",
+          "sourceUrl": "https://kotlinlang.org/docs/basic-syntax.html#variables"
         },
         {
           "statement": "¿Qué hace el operador ?: (Elvis) en Kotlin?",
@@ -83,7 +97,9 @@
           ],
           "correct": 1,
           "explanation": "Por ejemplo, nombre ?: \"Anónimo\" usa \"Anónimo\" cuando nombre es null.",
-          "difficulty": 1
+          "difficulty": 1,
+          "source": "Documentación de Kotlin · Null safety: operador Elvis",
+          "sourceUrl": "https://kotlinlang.org/docs/null-safety.html#elvis-operator"
         },
         {
           "statement": "¿Qué genera automáticamente una data class?",
@@ -95,14 +111,18 @@
           ],
           "correct": 1,
           "explanation": "Las funciones componentN son las que permiten desestructurar: val (a, b) = par.",
-          "difficulty": 1
+          "difficulty": 1,
+          "source": "Documentación de Kotlin · Data classes",
+          "sourceUrl": "https://kotlinlang.org/docs/data-classes.html"
         },
         {
           "statement": "¿Qué palabra clave declara un singleton en Kotlin?",
           "options": ["static", "singleton", "object", "lateinit"],
           "correct": 2,
           "explanation": "object declara una clase con una única instancia; companion object es un object dentro de una clase.",
-          "difficulty": 1
+          "difficulty": 1,
+          "source": "Documentación de Kotlin · Object declarations",
+          "sourceUrl": "https://kotlinlang.org/docs/object-declarations.html"
         },
         {
           "statement": "¿Qué indica el modificador suspend en una función?",
@@ -114,14 +134,18 @@
           ],
           "correct": 1,
           "explanation": "Mientras espera (red, disco), el hilo queda libre para otro trabajo.",
-          "difficulty": 2
+          "difficulty": 2,
+          "source": "Documentación de Kotlin · Coroutines basics",
+          "sourceUrl": "https://kotlinlang.org/docs/coroutines-basics.html"
         },
         {
           "statement": "¿Qué devuelve listOf(1, 2, 3).map { it * 2 }?",
           "options": ["[1, 2, 3]", "[2, 4, 6]", "12", "[1, 4, 9]"],
           "correct": 1,
           "explanation": "map aplica la función a cada elemento y devuelve una lista nueva.",
-          "difficulty": 1
+          "difficulty": 1,
+          "source": "Documentación de Kotlin · Collection transformations: map",
+          "sourceUrl": "https://kotlinlang.org/docs/collection-transformations.html#map"
         }
       ]
     },
@@ -133,14 +157,18 @@
           "options": ["list", "dict", "set", "tuple"],
           "correct": 3,
           "explanation": "Una tupla no se puede modificar después de creada; por eso puede usarse como clave de un diccionario.",
-          "difficulty": 1
+          "difficulty": 1,
+          "source": "Tutorial de Python · Tuplas y secuencias",
+          "sourceUrl": "https://docs.python.org/es/3/tutorial/datastructures.html#tuples-and-sequences"
         },
         {
           "statement": "¿Qué devuelve [x * x for x in range(4)]?",
           "options": ["[1, 4, 9, 16]", "[0, 1, 4, 9]", "[0, 1, 2, 3]", "[0, 2, 4, 6]"],
           "correct": 1,
           "explanation": "range(4) produce 0, 1, 2 y 3; sus cuadrados son 0, 1, 4 y 9.",
-          "difficulty": 1
+          "difficulty": 1,
+          "source": "Tutorial de Python · Comprensión de listas",
+          "sourceUrl": "https://docs.python.org/es/3/tutorial/datastructures.html#list-comprehensions"
         },
         {
           "statement": "¿Para qué sirve \"with open(...) as f\"?",
@@ -152,7 +180,9 @@
           ],
           "correct": 1,
           "explanation": "with usa un gestor de contexto que libera el recurso al terminar el bloque.",
-          "difficulty": 1
+          "difficulty": 1,
+          "source": "Tutorial de Python · Leyendo y escribiendo archivos",
+          "sourceUrl": "https://docs.python.org/es/3/tutorial/inputoutput.html#reading-and-writing-files"
         },
         {
           "statement": "¿Qué hace el decorador @staticmethod?",
@@ -164,7 +194,9 @@
           ],
           "correct": 0,
           "explanation": "Es una función normal agrupada dentro de la clase; no accede a la instancia ni a la clase.",
-          "difficulty": 2
+          "difficulty": 2,
+          "source": "Funciones integradas de Python · staticmethod",
+          "sourceUrl": "https://docs.python.org/es/3/library/functions.html#staticmethod"
         },
         {
           "statement": "¿Qué problema tiene declarar def agregar(x, lista=[])?",
@@ -176,14 +208,18 @@
           ],
           "correct": 1,
           "explanation": "Lo habitual es usar lista=None y crear la lista dentro de la función.",
-          "difficulty": 2
+          "difficulty": 2,
+          "source": "Tutorial de Python · Argumentos con valores por omisión",
+          "sourceUrl": "https://docs.python.org/es/3/tutorial/controlflow.html#default-argument-values"
         },
         {
           "statement": "¿Qué imprime print(3 // 2)?",
           "options": ["1.5", "1", "2", "Error"],
           "correct": 1,
           "explanation": "// es la división entera: descarta la parte decimal (redondea hacia abajo).",
-          "difficulty": 1
+          "difficulty": 1,
+          "source": "Referencia de Python · Operaciones aritméticas binarias",
+          "sourceUrl": "https://docs.python.org/es/3/reference/expressions.html#binary-arithmetic-operations"
         }
       ]
     },
@@ -195,7 +231,9 @@
           "options": ["WHERE", "HAVING", "ORDER BY", "LIMIT"],
           "correct": 1,
           "explanation": "WHERE filtra filas antes de agrupar; HAVING filtra los grupos ya formados.",
-          "difficulty": 1
+          "difficulty": 1,
+          "source": "Documentación de PostgreSQL · Aggregate Functions (HAVING)",
+          "sourceUrl": "https://www.postgresql.org/docs/current/tutorial-agg.html"
         },
         {
           "statement": "¿Qué devuelve un LEFT JOIN?",
@@ -207,7 +245,9 @@
           ],
           "correct": 1,
           "explanation": "Es útil para encontrar registros sin relación, filtrando donde la derecha es NULL.",
-          "difficulty": 1
+          "difficulty": 1,
+          "source": "Documentación de PostgreSQL · Joins Between Tables",
+          "sourceUrl": "https://www.postgresql.org/docs/current/tutorial-join.html"
         },
         {
           "statement": "¿Qué garantiza una restricción PRIMARY KEY?",
@@ -219,14 +259,18 @@
           ],
           "correct": 1,
           "explanation": "Cada fila se puede identificar sin ambigüedad por su clave primaria.",
-          "difficulty": 1
+          "difficulty": 1,
+          "source": "Documentación de PostgreSQL · Constraints: Primary Keys",
+          "sourceUrl": "https://www.postgresql.org/docs/current/ddl-constraints.html#DDL-CONSTRAINTS-PRIMARY-KEYS"
         },
         {
           "statement": "¿Qué significa la \"A\" de ACID en bases de datos?",
           "options": ["Asincronía", "Atomicidad", "Autenticación", "Agregación"],
           "correct": 1,
           "explanation": "Atomicidad: una transacción se aplica completa o no se aplica nada.",
-          "difficulty": 2
+          "difficulty": 2,
+          "source": "Wikipedia · ACID",
+          "sourceUrl": "https://es.wikipedia.org/wiki/ACID"
         },
         {
           "statement": "¿Qué diferencia hay entre COUNT(*) y COUNT(columna)?",
@@ -238,7 +282,9 @@
           ],
           "correct": 1,
           "explanation": "Para contar valores distintos se usa COUNT(DISTINCT columna).",
-          "difficulty": 2
+          "difficulty": 2,
+          "source": "Documentación de PostgreSQL · Aggregate Functions (count)",
+          "sourceUrl": "https://www.postgresql.org/docs/current/functions-aggregate.html"
         }
       ]
     },
@@ -255,7 +301,9 @@
           ],
           "correct": 1,
           "explanation": "Reescribe el último commit; evita usarlo en commits que ya compartiste.",
-          "difficulty": 1
+          "difficulty": 1,
+          "source": "Libro Pro Git · Deshacer cosas (--amend)",
+          "sourceUrl": "https://git-scm.com/book/es/v2/Fundamentos-de-Git-Deshacer-Cosas"
         },
         {
           "statement": "¿Qué diferencia hay entre git fetch y git pull?",
@@ -267,7 +315,9 @@
           ],
           "correct": 1,
           "explanation": "pull equivale a fetch seguido de merge (o rebase, según la configuración).",
-          "difficulty": 1
+          "difficulty": 1,
+          "source": "Libro Pro Git · Trabajar con remotos (fetch y pull)",
+          "sourceUrl": "https://git-scm.com/book/es/v2/Fundamentos-de-Git-Trabajar-con-Remotos"
         },
         {
           "statement": "¿Para qué sirve \"git stash\"?",
@@ -279,7 +329,9 @@
           ],
           "correct": 0,
           "explanation": "Luego los recuperas con git stash pop.",
-          "difficulty": 1
+          "difficulty": 1,
+          "source": "Libro Pro Git · Guardado rápido y limpieza (stash)",
+          "sourceUrl": "https://git-scm.com/book/es/v2/Herramientas-de-Git-Guardado-r%C3%A1pido-y-Limpieza"
         },
         {
           "statement": "Estando en tu rama de trabajo, ¿qué hace \"git rebase main\"?",
@@ -291,7 +343,9 @@
           ],
           "correct": 1,
           "explanation": "El historial queda lineal, pero tus commits reciben identificadores nuevos.",
-          "difficulty": 2
+          "difficulty": 2,
+          "source": "Libro Pro Git · Reorganizar el trabajo realizado (rebase)",
+          "sourceUrl": "https://git-scm.com/book/es/v2/Ramificaciones-en-Git-Reorganizar-el-Trabajo-Realizado"
         }
       ]
     },
@@ -303,14 +357,18 @@
           "options": ["200", "301", "404", "500"],
           "correct": 2,
           "explanation": "404 Not Found: el servidor no encontró el recurso pedido.",
-          "difficulty": 1
+          "difficulty": 1,
+          "source": "MDN · 404 Not Found",
+          "sourceUrl": "https://developer.mozilla.org/es/docs/Web/HTTP/Status/404"
         },
         {
           "statement": "¿Qué método HTTP es idempotente y se usa normalmente para reemplazar un recurso completo?",
           "options": ["POST", "PUT", "PATCH", "CONNECT"],
           "correct": 1,
           "explanation": "Enviar el mismo PUT varias veces deja el recurso en el mismo estado; PATCH es para cambios parciales.",
-          "difficulty": 2
+          "difficulty": 2,
+          "source": "MDN · PUT",
+          "sourceUrl": "https://developer.mozilla.org/es/docs/Web/HTTP/Methods/PUT"
         },
         {
           "statement": "¿Qué significa un código 401?",
@@ -322,14 +380,18 @@
           ],
           "correct": 1,
           "explanation": "401 pide autenticarse; 403 significa que no tienes permiso para ese recurso.",
-          "difficulty": 1
+          "difficulty": 1,
+          "source": "MDN · 401 Unauthorized",
+          "sourceUrl": "https://developer.mozilla.org/es/docs/Web/HTTP/Status/401"
         },
         {
           "statement": "¿Qué familia de códigos HTTP indica errores del servidor?",
           "options": ["2xx", "3xx", "4xx", "5xx"],
           "correct": 3,
           "explanation": "4xx son errores de la solicitud del cliente; 5xx, fallas del servidor.",
-          "difficulty": 1
+          "difficulty": 1,
+          "source": "MDN · Códigos de estado de respuesta HTTP",
+          "sourceUrl": "https://developer.mozilla.org/es/docs/Web/HTTP/Status"
         },
         {
           "statement": "En REST, ¿qué significa que una API sea \"sin estado\" (stateless)?",
@@ -341,7 +403,9 @@
           ],
           "correct": 1,
           "explanation": "Por eso se envía un token en cada solicitud en lugar de depender de una sesión en el servidor.",
-          "difficulty": 2
+          "difficulty": 2,
+          "source": "Wikipedia · Transferencia de Estado Representacional (REST)",
+          "sourceUrl": "https://es.wikipedia.org/wiki/Transferencia_de_Estado_Representacional"
         }
       ]
     }

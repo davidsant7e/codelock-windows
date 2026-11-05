@@ -174,6 +174,7 @@ namespace CodeLock
             {
                 var t = Reloj.AhoraMs();
                 if (r == Resultado.Saltada) historial.Saltada(p.Id, t);
+                else if (r == Resultado.NoSe) historial.NoSabia(p.Id, t);
                 else historial.Respondida(p.Id, r == Resultado.Correcta, t);
                 Guardar();
             };
@@ -304,7 +305,7 @@ namespace CodeLock
                 return "  " + g.Key + ": " + (veces - fallos) + "/" + veces + " aciertos";
             });
             MessageBox.Show(
-                "Respondidas: " + h.Respondidas + "\nAciertos: " + h.Aciertos + " (" + porcentaje + " %)\nSaltadas: " + h.Saltadas +
+                "Respondidas: " + h.Respondidas + "\nAciertos: " + h.Aciertos + " (" + porcentaje + " %)\nNo sé: " + h.NoSe + "\nSaltadas: " + h.Saltadas +
                 "\n\nPor tema:\n" + string.Join("\n", porTema.ToArray()) +
                 "\n\n" + preguntas.Count + " preguntas en total.",
                 "CodeLock · Estadísticas", MessageBoxButtons.OK, MessageBoxIcon.Information);

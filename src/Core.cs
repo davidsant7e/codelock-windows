@@ -36,6 +36,8 @@ namespace CodeLock
         [DataMember(Name = "correct")] public int Correcta = -1;
         [DataMember(Name = "explanation")] public string Explicacion;
         [DataMember(Name = "difficulty")] public int Dificultad;
+        [DataMember(Name = "source")] public string Fuente;
+        [DataMember(Name = "sourceUrl")] public string FuenteUrl;
     }
 
     /// <summary>Una pregunta lista para mostrar.</summary>
@@ -47,6 +49,32 @@ namespace CodeLock
         public List<string> Opciones;
         public int Correcta;
         public string Explicacion;
+        public string Fuente;      // de dónde sale: "Documentación de Kotlin · Data classes" (puede ser vacío)
+        public string FuenteUrl;   // enlace https:// a la documentación, o null
+        public string Archivo;     // archivo .json de donde se cargó
+    }
+
+    /// <summary>El enlace para "Ver documentación": el de la pregunta, o una búsqueda si no tiene (igual que en Android).</summary>
+    public static class Enlaces
+    {
+        public static bool EsWeb(string url)
+        {
+            return url != null && (url.StartsWith("https://") || url.StartsWith("http://")) && url.Length > 10 && url.IndexOf(' ') < 0;
+        }
+
+        public static string Limpiar(string url)
+        {
+            if (url == null) return null;
+            url = url.Trim();
+            return EsWeb(url) ? url : null;
+        }
+
+        public static string Para(Pregunta p)
+        {
+            var url = Limpiar(p.FuenteUrl);
+            if (url != null) return url;
+            return "https://www.google.com/search?q=" + Uri.EscapeDataString(p.Categoria + " " + p.Enunciado).Replace("%20", "+");
+        }
     }
 
     /// <summary>Carga y valida los archivos .json de la carpeta de preguntas.</summary>
@@ -124,6 +152,9 @@ namespace CodeLock
                         Opciones = opciones,
                         Correcta = q.Correcta,
                         Explicacion = (q.Explicacion ?? "").Trim(),
+                        Fuente = (q.Fuente ?? "").Trim(),
+                        FuenteUrl = Enlaces.Limpiar(q.FuenteUrl),
+                        Archivo = origen,
                     });
                 }
             }
@@ -160,6 +191,7 @@ namespace CodeLock
         [DataMember(Name = "respondidas")] public int Respondidas;
         [DataMember(Name = "aciertos")] public int Aciertos;
         [DataMember(Name = "saltadas")] public int Saltadas;
+        [DataMember(Name = "noSe")] public int NoSe;
 
         public EstadoPregunta Estado(string id)
         {
@@ -191,6 +223,16 @@ namespace CodeLock
             e.Ultima = ahora;
             Respondidas++;
             if (correcta) Aciertos++;
+        }
+
+        /// <summary>"No sé": vuelve pronto como una fallada, pero no cuenta en el porcentaje de aciertos.</summary>
+        public void NoSabia(string id, long ahora)
+        {
+            var e = Estado(id);
+            e.Veces++;
+            e.Fallos++;
+            e.Ultima = ahora;
+            NoSe++;
         }
 
         public void Saltada(string id, long ahora)

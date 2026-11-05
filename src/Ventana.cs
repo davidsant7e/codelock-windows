@@ -2,12 +2,13 @@
 
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Drawing;
 using System.Windows.Forms;
 
 namespace CodeLock
 {
-    public enum Resultado { Correcta, Incorrecta, Saltada }
+    public enum Resultado { Correcta, Incorrecta, NoSe, Saltada }
 
     public class VentanaPregunta : Form
     {
@@ -23,6 +24,9 @@ namespace CodeLock
         readonly List<Button> botones = new List<Button>();
         readonly Label lblResultado;
         readonly Label lblExplicacion;
+        readonly Label lblFuente;
+        readonly Button btnDocumentacion;
+        readonly Button btnNoSe;
         readonly Button btnSaltar;
         readonly Button btnOtra;
         readonly Button btnCerrar;
@@ -97,6 +101,18 @@ namespace CodeLock
             panel.Controls.Add(lblResultado);
             panel.Controls.Add(lblExplicacion);
 
+            // "De dónde sale": fuente + archivo, y botón para abrir la documentación.
+            var fuente = p.Fuente.Length > 0 ? p.Fuente : "Sin fuente guardada";
+            lblFuente = Etiqueta("DE DÓNDE SALE:  " + fuente + "   ·   " + p.Archivo,
+                new Font("Segoe UI", 9f), Durazno, new Padding(0, 2, 0, 6));
+            lblFuente.Visible = false;
+            panel.Controls.Add(lblFuente);
+            btnDocumentacion = Boton(Enlaces.EsWeb(p.FuenteUrl) ? "Ver documentación  (D)" : "Buscar en la web  (D)", false);
+            btnDocumentacion.Margin = new Padding(0, 0, 0, 6);
+            btnDocumentacion.Click += delegate { AbrirDocumentacion(); };
+            btnDocumentacion.Visible = false;
+            panel.Controls.Add(btnDocumentacion);
+
             var fila = new FlowLayoutPanel
             {
                 FlowDirection = FlowDirection.RightToLeft,
@@ -113,9 +129,12 @@ namespace CodeLock
             btnOtra.Visible = false;
             btnSaltar = Boton("Saltar", false);
             btnSaltar.Click += delegate { Close(); };
+            btnNoSe = Boton("No sé  (0)", false);
+            btnNoSe.Click += delegate { Responder(-1); };
             fila.Controls.Add(btnCerrar);
             fila.Controls.Add(btnOtra);
             fila.Controls.Add(btnSaltar);
+            fila.Controls.Add(btnNoSe);
             panel.Controls.Add(fila);
 
             Controls.Add(panel);
@@ -140,6 +159,14 @@ namespace CodeLock
             {
                 if (e.KeyCode == Keys.Enter) { Close(); e.Handled = true; }
                 if (e.KeyCode == Keys.N) { QuiereOtra = true; Close(); e.Handled = true; }
+                if (e.KeyCode == Keys.D) { AbrirDocumentacion(); e.Handled = true; }
+                return;
+            }
+            if (e.KeyCode == Keys.D0 || e.KeyCode == Keys.NumPad0)
+            {
+                Responder(-1);
+                e.Handled = true;
+                e.SuppressKeyPress = true;
                 return;
             }
             int indice = -1;
@@ -154,10 +181,12 @@ namespace CodeLock
             }
         }
 
+        /// <summary>Responde con la opción elegida; -1 = "No sé".</summary>
         void Responder(int indice)
         {
             if (respondida) return;
             respondida = true;
+            bool noSe = indice < 0;
             bool bien = indice == pregunta.Correcta;
             for (int i = 0; i < botones.Count; i++)
             {
@@ -177,18 +206,36 @@ namespace CodeLock
                 b.Paint += PintarBotonFijo;
                 b.Invalidate();
             }
-            lblResultado.Text = bien ? "✓  ¡Correcto!" : "✗  No era esa. La correcta: " + (pregunta.Correcta + 1) + ".";
+            lblResultado.Text = noSe ? "No pasa nada: la respuesta es la " + (pregunta.Correcta + 1) + ". Volverá pronto."
+                : bien ? "✓  ¡Correcto!" : "✗  No era esa. La correcta: " + (pregunta.Correcta + 1) + ".";
             lblResultado.Visible = true;
             if (pregunta.Explicacion.Length > 0)
             {
                 lblExplicacion.Text = pregunta.Explicacion;
                 lblExplicacion.Visible = true;
             }
+            lblFuente.Visible = true;
+            btnDocumentacion.Visible = true;
             btnSaltar.Visible = false;
+            btnNoSe.Visible = false;
             btnOtra.Visible = true;
             btnCerrar.Text = "Cerrar  (Enter)";
             btnOtra.Focus();
-            Avisar(bien ? Resultado.Correcta : Resultado.Incorrecta);
+            Avisar(noSe ? Resultado.NoSe : bien ? Resultado.Correcta : Resultado.Incorrecta);
+        }
+
+        void AbrirDocumentacion()
+        {
+            // Abre el navegador predeterminado. La ventana queda arriba (TopMost): la bajamos para que se vea la página.
+            try
+            {
+                Process.Start(new ProcessStartInfo(Enlaces.Para(pregunta)) { UseShellExecute = true });
+                TopMost = false;
+            }
+            catch (Exception)
+            {
+                lblFuente.Text = "No se pudo abrir el navegador. Enlace: " + Enlaces.Para(pregunta);
+            }
         }
 
         void PintarBotonFijo(object sender, PaintEventArgs e)
