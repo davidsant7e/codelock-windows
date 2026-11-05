@@ -14,7 +14,7 @@ $lnk.Arguments = $argumentos
 $lnk.WorkingDirectory = $PSScriptRoot
 $lnk.WindowStyle = 7
 $lnk.Description = "CodeLock: preguntas de programación en Windows"
-$lnk.IconLocation = "$env:SystemRoot\System32\shell32.dll,47"
+$lnk.IconLocation = (Join-Path $PSScriptRoot "assets\codelock.ico")
 $lnk.Save()
 
 Write-Host "Acceso directo creado en: $acceso"

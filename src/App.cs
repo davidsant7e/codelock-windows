@@ -32,6 +32,7 @@ namespace CodeLock
         static Historial historial;
         static List<Pregunta> preguntas = new List<Pregunta>();
         static NotifyIcon icono;
+        static Icon iconoVentana;
         static VentanaPregunta abierta;
         static bool bloqueada;
         static readonly Random azar = new Random();
@@ -65,7 +66,8 @@ namespace CodeLock
 
                 using (icono = new NotifyIcon())
                 {
-                    icono.Icon = DibujarIcono();
+                    icono.Icon = CargarIcono(SystemInformation.SmallIconSize);
+                    iconoVentana = CargarIcono(new Size(32, 32));
                     icono.ContextMenuStrip = CrearMenu();
                     icono.DoubleClick += delegate { Preguntar(true); };
                     icono.Visible = true;
@@ -167,6 +169,7 @@ namespace CodeLock
 
             var contador = historial.Aciertos + "/" + historial.Respondidas + " aciertos";
             abierta = new VentanaPregunta(p, contador);
+            if (iconoVentana != null) abierta.Icon = iconoVentana;
             abierta.Respondio += delegate(Resultado r)
             {
                 var t = Reloj.AhoraMs();
@@ -339,7 +342,19 @@ namespace CodeLock
             return s.Length <= max ? s : s.Substring(0, max);
         }
 
-        /// <summary>Ícono 32×32: dos llaves cruzadas (El Hierofante) sobre azul noche.</summary>
+        /// <summary>El ícono del arcano V · El Hierofante (codelock.ico junto al .exe); si falta, uno dibujado.</summary>
+        static Icon CargarIcono(Size tamano)
+        {
+            try
+            {
+                var ruta = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "codelock.ico");
+                if (File.Exists(ruta)) return new Icon(ruta, tamano);
+            }
+            catch (Exception) { }
+            return DibujarIcono();
+        }
+
+        /// <summary>Ícono de respaldo 32×32: dos llaves cruzadas sobre azul noche.</summary>
         static Icon DibujarIcono()
         {
             using (var bmp = new Bitmap(32, 32))

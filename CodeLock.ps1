@@ -11,6 +11,7 @@ $ErrorActionPreference = "Stop"
 
 $fuentes = @("Core.cs", "Ventana.cs", "App.cs", "Program.cs") | ForEach-Object { Join-Path $PSScriptRoot "src\$_" }
 $preguntas = Join-Path $PSScriptRoot "preguntas"
+$icono = Join-Path $PSScriptRoot "assets\codelock.ico"
 $bin = Join-Path $env:LOCALAPPDATA "CodeLock"
 $exe = Join-Path $bin "CodeLock.exe"
 
@@ -20,7 +21,7 @@ function Escribir($texto) { if ($Consola) { Write-Host $texto } }
 $compilar = -not (Test-Path $exe)
 if (-not $compilar) {
     $fechaExe = (Get-Item $exe).LastWriteTime
-    $compilar = @($fuentes | Where-Object { (Get-Item $_).LastWriteTime -gt $fechaExe }).Count -gt 0
+    $compilar = @(($fuentes + $icono) | Where-Object { (Get-Item $_).LastWriteTime -gt $fechaExe }).Count -gt 0
 }
 
 if ($compilar) {
@@ -34,7 +35,8 @@ if ($compilar) {
 
     New-Item -ItemType Directory -Force -Path $bin | Out-Null
     Escribir "Compilando CodeLock..."
-    $salida = & $csc /nologo /target:winexe /optimize+ /codepage:65001 "/out:$exe" `
+    Copy-Item $icono (Join-Path $bin "codelock.ico") -Force
+    $salida = & $csc /nologo /target:winexe /optimize+ /codepage:65001 "/out:$exe" "/win32icon:$icono" `
         /r:System.dll /r:System.Core.dll /r:System.Drawing.dll /r:System.Windows.Forms.dll /r:System.Runtime.Serialization.dll `
         $fuentes 2>&1
     if ($LASTEXITCODE -ne 0) {
