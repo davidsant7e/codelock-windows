@@ -11,7 +11,7 @@ App hermana de [CodeLock para Android](https://github.com/davidsant7e/codelock-a
 - **No molesta**: no pregunta si estás en pantalla completa (juego, video, presentación), con "No molestar" activo, con la sesión bloqueada o si llevas más de 5 minutos sin tocar el PC.
 - **Elige bien la pregunta**: primero las que nunca viste, repite más las que fallaste, no repite las últimas 10.
 - **Responde con el teclado**: `1`–`6` (o `A`–`F`) para elegir, `Esc` para cerrar o saltar, `Enter` para cerrar, `N` para otra.
-- Ícono de las llaves junto al reloj, con menú: *Pregunta ahora* (o doble clic), *Frecuencia*, *Preguntar al desbloquear*, *Pausar 1 hora*, *Estadísticas*, *Abrir carpeta de preguntas*, *Recargar preguntas*, *Salir*.
+- Ícono del arcano **V · El Hierofante** (dos llaves cruzadas) junto al reloj, con menú: *Pregunta ahora* (o doble clic), *Frecuencia*, *Preguntar al desbloquear*, *Pausar 1 hora*, *Estadísticas*, *Abrir carpeta de preguntas*, *Recargar preguntas*, *Salir*.
 
 No instala nada: lo compila el compilador de C# que ya trae Windows (.NET Framework 4) a un `.exe` pequeño en `%LOCALAPPDATA%\CodeLock`. Queda abierto solo ese `.exe` (unos pocos MB de RAM), no PowerShell.
 
@@ -67,6 +67,7 @@ Si cambias el código en `src\`, la próxima vez que abras CodeLock se vuelve a 
 | `src/Program.cs` | Punto de entrada del `.exe`. |
 | `tests/CoreTests.cs` | Pruebas del núcleo (233 comprobaciones). |
 | `CodeLock.ps1` | Compila si hace falta y abre el programa. |
+| `assets/codelock.ico` | Ícono del arcano V · El Hierofante (programa, bandeja, ventana y acceso directo). |
 
 Pruebas en Windows (desde la carpeta del proyecto, en PowerShell):
 
