@@ -1,0 +1,349 @@
+{
+  "version": 1,
+  "categories": [
+    {
+      "name": "Programación general",
+      "questions": [
+        {
+          "statement": "¿Cuál es la complejidad temporal de buscar un elemento en un arreglo ordenado con búsqueda binaria?",
+          "options": ["O(1)", "O(log n)", "O(n)", "O(n log n)"],
+          "correct": 1,
+          "explanation": "En cada paso se descarta la mitad de los elementos que quedan.",
+          "difficulty": 1
+        },
+        {
+          "statement": "¿Qué estructura de datos sigue el principio LIFO (el último en entrar es el primero en salir)?",
+          "options": ["Cola", "Pila", "Árbol", "Tabla hash"],
+          "correct": 1,
+          "explanation": "En una pila se saca primero lo último que se puso, como una pila de platos.",
+          "difficulty": 1
+        },
+        {
+          "statement": "¿Qué significa que una función sea \"pura\"?",
+          "options": [
+            "Que no recibe parámetros",
+            "Que con los mismos argumentos siempre devuelve lo mismo y no tiene efectos secundarios",
+            "Que está escrita en un solo archivo",
+            "Que no usa variables"
+          ],
+          "correct": 1,
+          "explanation": "Una función pura no depende de nada externo ni modifica nada fuera de ella; por eso es fácil de probar.",
+          "difficulty": 1
+        },
+        {
+          "statement": "¿Cuál es el costo promedio de buscar una clave en una tabla hash bien distribuida?",
+          "options": ["O(1)", "O(log n)", "O(n)", "O(n²)"],
+          "correct": 0,
+          "explanation": "La función hash lleva directo a la posición; solo las colisiones agregan trabajo extra.",
+          "difficulty": 2
+        },
+        {
+          "statement": "En una función recursiva, ¿qué es el \"caso base\"?",
+          "options": [
+            "La primera llamada a la función",
+            "La condición que detiene la recursión",
+            "El valor de retorno más grande",
+            "Una variable global compartida"
+          ],
+          "correct": 1,
+          "explanation": "Sin caso base la función se llamaría a sí misma sin fin hasta desbordar la pila.",
+          "difficulty": 1
+        },
+        {
+          "statement": "¿Qué principio SOLID dice que una clase debería tener una sola razón para cambiar?",
+          "options": ["Abierto/cerrado", "Sustitución de Liskov", "Responsabilidad única", "Inversión de dependencias"],
+          "correct": 2,
+          "explanation": "Responsabilidad única: cada clase se encarga de una sola cosa.",
+          "difficulty": 2
+        }
+      ]
+    },
+    {
+      "name": "Kotlin",
+      "questions": [
+        {
+          "statement": "En Kotlin, ¿qué diferencia hay entre val y var?",
+          "options": [
+            "val es mutable y var no",
+            "val no se puede reasignar; var sí",
+            "No hay diferencia",
+            "val solo sirve para números"
+          ],
+          "correct": 1,
+          "explanation": "val es una referencia de solo lectura; var se puede reasignar.",
+          "difficulty": 1
+        },
+        {
+          "statement": "¿Qué hace el operador ?: (Elvis) en Kotlin?",
+          "options": [
+            "Compara dos valores",
+            "Devuelve el valor de la derecha si el de la izquierda es null",
+            "Lanza una excepción si el valor es null",
+            "Convierte un tipo en nullable"
+          ],
+          "correct": 1,
+          "explanation": "Por ejemplo, nombre ?: \"Anónimo\" usa \"Anónimo\" cuando nombre es null.",
+          "difficulty": 1
+        },
+        {
+          "statement": "¿Qué genera automáticamente una data class?",
+          "options": [
+            "Solo el constructor",
+            "equals, hashCode, toString, copy y las funciones componentN",
+            "Un singleton",
+            "Getters privados para cada propiedad"
+          ],
+          "correct": 1,
+          "explanation": "Las funciones componentN son las que permiten desestructurar: val (a, b) = par.",
+          "difficulty": 1
+        },
+        {
+          "statement": "¿Qué palabra clave declara un singleton en Kotlin?",
+          "options": ["static", "singleton", "object", "lateinit"],
+          "correct": 2,
+          "explanation": "object declara una clase con una única instancia; companion object es un object dentro de una clase.",
+          "difficulty": 1
+        },
+        {
+          "statement": "¿Qué indica el modificador suspend en una función?",
+          "options": [
+            "Que se ejecuta en otro proceso",
+            "Que puede pausarse sin bloquear el hilo y solo se llama desde una corrutina u otra función suspend",
+            "Que siempre es más rápida",
+            "Que no puede lanzar excepciones"
+          ],
+          "correct": 1,
+          "explanation": "Mientras espera (red, disco), el hilo queda libre para otro trabajo.",
+          "difficulty": 2
+        },
+        {
+          "statement": "¿Qué devuelve listOf(1, 2, 3).map { it * 2 }?",
+          "options": ["[1, 2, 3]", "[2, 4, 6]", "12", "[1, 4, 9]"],
+          "correct": 1,
+          "explanation": "map aplica la función a cada elemento y devuelve una lista nueva.",
+          "difficulty": 1
+        }
+      ]
+    },
+    {
+      "name": "Python",
+      "questions": [
+        {
+          "statement": "¿Cuál de estos tipos es inmutable en Python?",
+          "options": ["list", "dict", "set", "tuple"],
+          "correct": 3,
+          "explanation": "Una tupla no se puede modificar después de creada; por eso puede usarse como clave de un diccionario.",
+          "difficulty": 1
+        },
+        {
+          "statement": "¿Qué devuelve [x * x for x in range(4)]?",
+          "options": ["[1, 4, 9, 16]", "[0, 1, 4, 9]", "[0, 1, 2, 3]", "[0, 2, 4, 6]"],
+          "correct": 1,
+          "explanation": "range(4) produce 0, 1, 2 y 3; sus cuadrados son 0, 1, 4 y 9.",
+          "difficulty": 1
+        },
+        {
+          "statement": "¿Para qué sirve \"with open(...) as f\"?",
+          "options": [
+            "Para abrir el archivo en modo binario",
+            "Para cerrar el archivo automáticamente al salir del bloque, incluso si hay un error",
+            "Para leer todo el archivo de una vez",
+            "Para crear el archivo si no existe"
+          ],
+          "correct": 1,
+          "explanation": "with usa un gestor de contexto que libera el recurso al terminar el bloque.",
+          "difficulty": 1
+        },
+        {
+          "statement": "¿Qué hace el decorador @staticmethod?",
+          "options": [
+            "Define un método que no recibe self ni cls",
+            "Hace que el método sea privado",
+            "Guarda en caché el resultado del método",
+            "Convierte el método en una propiedad"
+          ],
+          "correct": 0,
+          "explanation": "Es una función normal agrupada dentro de la clase; no accede a la instancia ni a la clase.",
+          "difficulty": 2
+        },
+        {
+          "statement": "¿Qué problema tiene declarar def agregar(x, lista=[])?",
+          "options": [
+            "Da error de sintaxis",
+            "La lista por defecto se crea una sola vez y se comparte entre llamadas",
+            "Hace la función más lenta",
+            "La lista no se puede modificar"
+          ],
+          "correct": 1,
+          "explanation": "Lo habitual es usar lista=None y crear la lista dentro de la función.",
+          "difficulty": 2
+        },
+        {
+          "statement": "¿Qué imprime print(3 // 2)?",
+          "options": ["1.5", "1", "2", "Error"],
+          "correct": 1,
+          "explanation": "// es la división entera: descarta la parte decimal (redondea hacia abajo).",
+          "difficulty": 1
+        }
+      ]
+    },
+    {
+      "name": "SQL",
+      "questions": [
+        {
+          "statement": "¿Qué cláusula filtra grupos después de un GROUP BY?",
+          "options": ["WHERE", "HAVING", "ORDER BY", "LIMIT"],
+          "correct": 1,
+          "explanation": "WHERE filtra filas antes de agrupar; HAVING filtra los grupos ya formados.",
+          "difficulty": 1
+        },
+        {
+          "statement": "¿Qué devuelve un LEFT JOIN?",
+          "options": [
+            "Solo las filas que coinciden en ambas tablas",
+            "Todas las filas de la tabla izquierda y sus coincidencias de la derecha (o NULL si no hay)",
+            "Todas las filas de ambas tablas",
+            "Solo las filas de la tabla derecha"
+          ],
+          "correct": 1,
+          "explanation": "Es útil para encontrar registros sin relación, filtrando donde la derecha es NULL.",
+          "difficulty": 1
+        },
+        {
+          "statement": "¿Qué garantiza una restricción PRIMARY KEY?",
+          "options": [
+            "Que la columna sea de texto",
+            "Valores únicos y no nulos que identifican cada fila",
+            "Que la tabla no tenga otros índices",
+            "Que los datos queden ordenados al insertarlos"
+          ],
+          "correct": 1,
+          "explanation": "Cada fila se puede identificar sin ambigüedad por su clave primaria.",
+          "difficulty": 1
+        },
+        {
+          "statement": "¿Qué significa la \"A\" de ACID en bases de datos?",
+          "options": ["Asincronía", "Atomicidad", "Autenticación", "Agregación"],
+          "correct": 1,
+          "explanation": "Atomicidad: una transacción se aplica completa o no se aplica nada.",
+          "difficulty": 2
+        },
+        {
+          "statement": "¿Qué diferencia hay entre COUNT(*) y COUNT(columna)?",
+          "options": [
+            "Ninguna",
+            "COUNT(columna) ignora las filas donde esa columna es NULL",
+            "COUNT(*) ignora las filas con algún NULL",
+            "COUNT(columna) cuenta solo valores distintos"
+          ],
+          "correct": 1,
+          "explanation": "Para contar valores distintos se usa COUNT(DISTINCT columna).",
+          "difficulty": 2
+        }
+      ]
+    },
+    {
+      "name": "Git",
+      "questions": [
+        {
+          "statement": "¿Qué hace \"git commit --amend\"?",
+          "options": [
+            "Crea una rama nueva",
+            "Modifica el último commit (su mensaje o su contenido)",
+            "Deshace todos los cambios locales",
+            "Sube los cambios al repositorio remoto"
+          ],
+          "correct": 1,
+          "explanation": "Reescribe el último commit; evita usarlo en commits que ya compartiste.",
+          "difficulty": 1
+        },
+        {
+          "statement": "¿Qué diferencia hay entre git fetch y git pull?",
+          "options": [
+            "Ninguna",
+            "fetch descarga los cambios sin integrarlos; pull los descarga y los integra",
+            "pull solo descarga etiquetas",
+            "fetch borra las ramas locales"
+          ],
+          "correct": 1,
+          "explanation": "pull equivale a fetch seguido de merge (o rebase, según la configuración).",
+          "difficulty": 1
+        },
+        {
+          "statement": "¿Para qué sirve \"git stash\"?",
+          "options": [
+            "Para guardar temporalmente cambios sin hacer commit",
+            "Para eliminar una rama",
+            "Para ver el historial de commits",
+            "Para firmar un commit"
+          ],
+          "correct": 0,
+          "explanation": "Luego los recuperas con git stash pop.",
+          "difficulty": 1
+        },
+        {
+          "statement": "Estando en tu rama de trabajo, ¿qué hace \"git rebase main\"?",
+          "options": [
+            "Borra la rama main",
+            "Vuelve a aplicar tus commits encima del último commit de main",
+            "Fusiona main creando un commit de merge",
+            "Cambia a la rama main"
+          ],
+          "correct": 1,
+          "explanation": "El historial queda lineal, pero tus commits reciben identificadores nuevos.",
+          "difficulty": 2
+        }
+      ]
+    },
+    {
+      "name": "HTTP y APIs",
+      "questions": [
+        {
+          "statement": "¿Qué código HTTP indica que el recurso no existe?",
+          "options": ["200", "301", "404", "500"],
+          "correct": 2,
+          "explanation": "404 Not Found: el servidor no encontró el recurso pedido.",
+          "difficulty": 1
+        },
+        {
+          "statement": "¿Qué método HTTP es idempotente y se usa normalmente para reemplazar un recurso completo?",
+          "options": ["POST", "PUT", "PATCH", "CONNECT"],
+          "correct": 1,
+          "explanation": "Enviar el mismo PUT varias veces deja el recurso en el mismo estado; PATCH es para cambios parciales.",
+          "difficulty": 2
+        },
+        {
+          "statement": "¿Qué significa un código 401?",
+          "options": [
+            "Prohibido aunque estés autenticado",
+            "No autenticado: faltan credenciales válidas",
+            "Demasiadas solicitudes",
+            "Error interno del servidor"
+          ],
+          "correct": 1,
+          "explanation": "401 pide autenticarse; 403 significa que no tienes permiso para ese recurso.",
+          "difficulty": 1
+        },
+        {
+          "statement": "¿Qué familia de códigos HTTP indica errores del servidor?",
+          "options": ["2xx", "3xx", "4xx", "5xx"],
+          "correct": 3,
+          "explanation": "4xx son errores de la solicitud del cliente; 5xx, fallas del servidor.",
+          "difficulty": 1
+        },
+        {
+          "statement": "En REST, ¿qué significa que una API sea \"sin estado\" (stateless)?",
+          "options": [
+            "Que no usa base de datos",
+            "Que cada solicitud trae toda la información necesaria y el servidor no guarda la sesión del cliente entre solicitudes",
+            "Que no devuelve JSON",
+            "Que solo acepta solicitudes GET"
+          ],
+          "correct": 1,
+          "explanation": "Por eso se envía un token en cada solicitud en lugar de depender de una sesión en el servidor.",
+          "difficulty": 2
+        }
+      ]
+    }
+  ]
+}
