@@ -49,10 +49,19 @@ static class CoreTests
         // --- banco real copiado de la app Android ---
         string carpeta = args.Length > 0 ? args[0] : "preguntas";
         errores.Clear();
-        var reales = Banco.CargarCarpeta(carpeta, errores);
+        var todas = Banco.CargarCarpeta(carpeta, errores);
+        Check(errores.Count == 0, "los bancos reales no tienen errores: " + string.Join(" | ", errores));
+        var reales = todas.Where(p => p.Archivo == "programacion.json").ToList();
         Check(reales.Count == 32, "el banco real tiene 32 preguntas: " + reales.Count);
-        Check(errores.Count == 0, "el banco real no tiene errores: " + string.Join(" | ", errores));
         Check(reales.Select(p => p.Categoria).Distinct().Count() == 6, "6 temas");
+
+        // --- banco del libro «Programación desde cero» ---
+        var libro = todas.Where(p => p.Archivo == "programacion-desde-cero.json").ToList();
+        Check(libro.Count == 120, "el libro aporta 120 preguntas: " + libro.Count);
+        Check(libro.Select(p => p.Categoria).Distinct().Count() == 3, "el libro tiene 3 niveles");
+        Check(libro.All(p => p.Fuente.StartsWith("Programación desde cero · Cap. ")), "cada pregunta del libro cita su capítulo");
+        Check(libro.All(p => p.FuenteUrl == null || Enlaces.EsWeb(p.FuenteUrl)), "los enlaces del libro son web");
+        Check(todas.Count == 152, "en total 152 preguntas: " + todas.Count);
 
         // duplicados entre archivos se ignoran
         var tmp = Path.Combine(Path.GetTempPath(), "codelock-test-" + Guid.NewGuid().ToString("N"));

@@ -52,6 +52,14 @@ Están en la carpeta `preguntas\`. Cada archivo `.json` es un banco en el **mism
 - `source` y `sourceUrl` son opcionales: de dónde sale la pregunta y el enlace a la documentación.
 - Agrega archivos nuevos (por ejemplo `ingles.json`) y usa *Recargar preguntas* en el menú. Las preguntas repetidas se ignoran.
 
+### Banco «Programación desde cero»
+
+`preguntas\programacion-desde-cero.json`: 120 preguntas del libro *Programación desde cero*
+(5 por cada uno de los 24 capítulos), en tres temas: **Nivel 1 Fundamentos**, **Nivel 2
+Desarrollo práctico** y **Nivel 3 Profundización**. «De dónde sale» indica el capítulo
+(«Programación desde cero · Cap. 13 Persistencia y SQL seguro») y, cuando aplica, enlaza la
+documentación oficial de Python o Git. Es el mismo archivo que trae CodeLock para Android.
+
 ## Dónde guarda las cosas
 
 | Qué | Dónde |
@@ -84,4 +92,4 @@ $csc = "$env:WINDIR\Microsoft.NET\Framework64\v4.0.30319\csc.exe"
 
 ## Estado
 
-Primera versión (4 nov 2026). Probada en Windows 11 (5 nov 2026): compila, pregunta por tiempo y al desbloquear, guarda el historial y arranca con Windows. En Linux con Mono: compila como C# 5 y las 233 pruebas del núcleo pasan.
+Primera versión (4 nov 2026). Probada en Windows 11 (5 nov 2026): compila, pregunta por tiempo y al desbloquear, guarda el historial y arranca con Windows. En Linux con Mono: compila como C# 5 y las 247 pruebas del núcleo pasan (incluye el banco del libro).

@@ -1,0 +1,1685 @@
+{
+  "version": 1,
+  "categories": [
+    {
+      "name": "Programación desde cero · Nivel 1 Fundamentos",
+      "questions": [
+        {
+          "statement": "¿Qué componente conserva los archivos incluso después de apagar el equipo?",
+          "options": [
+            "La memoria RAM",
+            "El procesador",
+            "El almacenamiento",
+            "La pantalla"
+          ],
+          "correct": 2,
+          "explanation": "La RAM es temporal; el almacenamiento persiste.",
+          "difficulty": 1,
+          "source": "Programación desde cero · Cap. 01 Computadoras, programas y mapa"
+        },
+        {
+          "statement": "¿Qué papel cumple el sistema operativo frente a Python?",
+          "options": [
+            "Solo muestra ventanas",
+            "Coordina recursos y ofrece servicios que Python solicita",
+            "Python es el sistema operativo",
+            "Traduce el código Python a español"
+          ],
+          "correct": 1,
+          "explanation": "Python ejecuta el programa y pide al sistema operativo memoria, archivos o pantalla.",
+          "difficulty": 1,
+          "source": "Programación desde cero · Cap. 01 Computadoras, programas y mapa"
+        },
+        {
+          "statement": "En la analogía de la cocina, ¿qué representa la receta?",
+          "options": [
+            "El hardware",
+            "El código fuente",
+            "El sistema operativo",
+            "Los datos"
+          ],
+          "correct": 1,
+          "explanation": "Receta = código fuente; cocinero = intérprete; ingredientes = datos.",
+          "difficulty": 1,
+          "source": "Programación desde cero · Cap. 01 Computadoras, programas y mapa"
+        },
+        {
+          "statement": "En una agenda, ¿qué es el «estado»?",
+          "options": [
+            "Las reglas para agregar y buscar",
+            "El conjunto actual de contactos",
+            "El lenguaje en que está escrita",
+            "El teclado del equipo"
+          ],
+          "correct": 1,
+          "explanation": "Datos: contactos; estado: los que existen ahora; comportamiento: agregar, buscar, eliminar.",
+          "difficulty": 2,
+          "source": "Programación desde cero · Cap. 01 Computadoras, programas y mapa"
+        },
+        {
+          "statement": "¿Qué produce print(4 * 60)?",
+          "options": [
+            "4 * 60",
+            "240",
+            "Un error",
+            "460"
+          ],
+          "correct": 1,
+          "explanation": "Python evalúa la multiplicación y muestra 240.",
+          "difficulty": 1,
+          "source": "Programación desde cero · Cap. 01 Computadoras, programas y mapa"
+        },
+        {
+          "statement": "¿Qué estrategia consiste en conservar los detalles relevantes y omitir los demás?",
+          "options": [
+            "Abstracción",
+            "Evaluación",
+            "Descomposición",
+            "Iteración"
+          ],
+          "correct": 0,
+          "explanation": "La abstracción reduce el problema sin perder lo necesario.",
+          "difficulty": 1,
+          "source": "Programación desde cero · Cap. 02 Pensamiento computacional"
+        },
+        {
+          "statement": "¿Qué le falta a «quiero ordenar mis gastos» para ser un problema programable?",
+          "options": [
+            "Una interfaz gráfica",
+            "Una base de datos",
+            "Un lenguaje de programación",
+            "Entradas, salida y reglas verificables"
+          ],
+          "correct": 3,
+          "explanation": "Una definición útil aclara qué recibe, qué entrega y qué reglas aplica.",
+          "difficulty": 1,
+          "source": "Programación desde cero · Cap. 02 Pensamiento computacional"
+        },
+        {
+          "statement": "Para validar tres calificaciones de 0 a 100, ¿cuál es un caso límite?",
+          "options": [
+            "Tres valores distintos",
+            "80, 95, 75",
+            "Una lista ordenada",
+            "Un valor de 101"
+          ],
+          "correct": 3,
+          "explanation": "Los casos límite incluyen valores fuera de rango, ceros o valores iguales.",
+          "difficulty": 2,
+          "source": "Programación desde cero · Cap. 02 Pensamiento computacional"
+        },
+        {
+          "statement": "¿Para qué sirve una traza manual?",
+          "options": [
+            "Para medir la velocidad del procesador",
+            "Para ocultar errores",
+            "Para registrar cómo cambian los valores en cada paso",
+            "Para compilar el programa"
+          ],
+          "correct": 2,
+          "explanation": "La tabla de traza sigue el estado paso a paso sin ejecutar todo mentalmente a la vez.",
+          "difficulty": 1,
+          "source": "Programación desde cero · Cap. 02 Pensamiento computacional"
+        },
+        {
+          "statement": "Para encontrar el mayor de tres números, ¿qué ventaja tiene mantener un «mayor actual» frente a ordenar?",
+          "options": [
+            "Usa más memoria",
+            "Expresa el objetivo directamente sin ordenar toda la colección",
+            "Funciona solo con números negativos",
+            "Ninguna, ordenar siempre es mejor"
+          ],
+          "correct": 1,
+          "explanation": "Ambos funcionan, pero el mayor actual evita trabajo innecesario.",
+          "difficulty": 2,
+          "source": "Programación desde cero · Cap. 02 Pensamiento computacional"
+        },
+        {
+          "statement": "¿Qué significa REPL?",
+          "options": [
+            "Repetir, Ejecutar, Probar, Limpiar",
+            "Revisar, Editar, Publicar, Lanzar",
+            "Registro de Programas en Línea",
+            "Leer, Evaluar, Imprimir y Repetir"
+          ],
+          "correct": 3,
+          "explanation": "El REPL lee una instrucción, la evalúa, muestra el resultado y vuelve a esperar.",
+          "difficulty": 1,
+          "source": "Programación desde cero · Cap. 03 Primer programa: terminal, REPL y scripts",
+          "sourceUrl": "https://docs.python.org/3/tutorial/interpreter.html"
+        },
+        {
+          "statement": "¿Qué diferencia una expresión de una sentencia?",
+          "options": [
+            "La expresión solo existe en el REPL",
+            "Son lo mismo",
+            "La expresión produce un valor; la sentencia realiza una acción",
+            "La sentencia siempre devuelve un número"
+          ],
+          "correct": 2,
+          "explanation": "2 + 3 es una expresión; resultado = 2 + 3 es una sentencia de asignación.",
+          "difficulty": 2,
+          "source": "Programación desde cero · Cap. 03 Primer programa: terminal, REPL y scripts",
+          "sourceUrl": "https://docs.python.org/3/tutorial/interpreter.html"
+        },
+        {
+          "statement": "¿Qué marca los bloques de código en Python?",
+          "options": [
+            "La indentación",
+            "Llaves {}",
+            "Paréntesis",
+            "Punto y coma"
+          ],
+          "correct": 0,
+          "explanation": "Las líneas indentadas tras los dos puntos pertenecen al bloque; la convención es 4 espacios.",
+          "difficulty": 1,
+          "source": "Programación desde cero · Cap. 03 Primer programa: terminal, REPL y scripts",
+          "sourceUrl": "https://docs.python.org/3/tutorial/interpreter.html"
+        },
+        {
+          "statement": "¿Cuál es un nombre de variable inválido en Python?",
+          "options": [
+            "nombre2",
+            "_contador",
+            "precio_total",
+            "2cantidad"
+          ],
+          "correct": 3,
+          "explanation": "Los nombres no pueden comenzar con un número.",
+          "difficulty": 1,
+          "source": "Programación desde cero · Cap. 03 Primer programa: terminal, REPL y scripts",
+          "sourceUrl": "https://docs.python.org/3/tutorial/interpreter.html"
+        },
+        {
+          "statement": "Al leer un SyntaxError, ¿qué conviene revisar además de la línea indicada?",
+          "options": [
+            "La línea anterior",
+            "Solo la primera línea del archivo",
+            "Nada más",
+            "El nombre del archivo"
+          ],
+          "correct": 0,
+          "explanation": "El problema pudo empezar antes, por ejemplo un paréntesis sin cerrar.",
+          "difficulty": 2,
+          "source": "Programación desde cero · Cap. 03 Primer programa: terminal, REPL y scripts",
+          "sourceUrl": "https://docs.python.org/3/tutorial/interpreter.html"
+        },
+        {
+          "statement": "¿Qué tipo de valor devuelve siempre input()?",
+          "options": [
+            "float",
+            "str",
+            "int",
+            "bool"
+          ],
+          "correct": 1,
+          "explanation": "La entrada del teclado siempre llega como texto y hay que convertirla.",
+          "difficulty": 1,
+          "source": "Programación desde cero · Cap. 04 Variables, tipos y entrada",
+          "sourceUrl": "https://docs.python.org/3/library/functions.html#input"
+        },
+        {
+          "statement": "¿Cuánto vale 7 // 2 en Python?",
+          "options": [
+            "4",
+            "1",
+            "3.5",
+            "3"
+          ],
+          "correct": 3,
+          "explanation": "// es división entera; / daría 3.5 y % daría 1.",
+          "difficulty": 1,
+          "source": "Programación desde cero · Cap. 04 Variables, tipos y entrada",
+          "sourceUrl": "https://docs.python.org/3/library/functions.html#input"
+        },
+        {
+          "statement": "¿Qué devuelve bool(\"False\")?",
+          "options": [
+            "Error",
+            "None",
+            "True",
+            "False"
+          ],
+          "correct": 2,
+          "explanation": "Cualquier cadena no vacía es verdadera; para interpretar respuestas conviene comparar el texto.",
+          "difficulty": 2,
+          "source": "Programación desde cero · Cap. 04 Variables, tipos y entrada",
+          "sourceUrl": "https://docs.python.org/3/library/functions.html#input"
+        },
+        {
+          "statement": "¿Qué hace int(3.9)?",
+          "options": [
+            "Trunca a 3",
+            "Devuelve 3.9",
+            "Redondea a 4",
+            "Lanza un error"
+          ],
+          "correct": 0,
+          "explanation": "int trunca; round(3.9) redondearía a 4.",
+          "difficulty": 2,
+          "source": "Programación desde cero · Cap. 04 Variables, tipos y entrada",
+          "sourceUrl": "https://docs.python.org/3/library/functions.html#input"
+        },
+        {
+          "statement": "En una f-string, ¿qué indica {total:.2f}?",
+          "options": [
+            "Dos cifras decimales",
+            "Multiplicar por 2",
+            "Formato de fecha",
+            "Dos espacios"
+          ],
+          "correct": 0,
+          "explanation": "El formato .2f muestra el número con dos decimales.",
+          "difficulty": 1,
+          "source": "Programación desde cero · Cap. 04 Variables, tipos y entrada",
+          "sourceUrl": "https://docs.python.org/3/library/functions.html#input"
+        },
+        {
+          "statement": "¿Qué valores produce range(1, 6)?",
+          "options": [
+            "0 a 6",
+            "1 a 6",
+            "1 a 5",
+            "0 a 5"
+          ],
+          "correct": 2,
+          "explanation": "El límite final no se incluye.",
+          "difficulty": 1,
+          "source": "Programación desde cero · Cap. 05 Condicionales y ciclos",
+          "sourceUrl": "https://docs.python.org/3/tutorial/controlflow.html"
+        },
+        {
+          "statement": "En una cadena if / elif / else, ¿cuántas ramas se ejecutan?",
+          "options": [
+            "Ninguna",
+            "Solo la primera cuya condición sea verdadera",
+            "Todas las verdaderas",
+            "Siempre la del else"
+          ],
+          "correct": 1,
+          "explanation": "Las ramas son excluyentes: se ejecuta la primera verdadera.",
+          "difficulty": 1,
+          "source": "Programación desde cero · Cap. 05 Condicionales y ciclos",
+          "sourceUrl": "https://docs.python.org/3/tutorial/controlflow.html"
+        },
+        {
+          "statement": "¿Qué hace break dentro de un ciclo?",
+          "options": [
+            "Termina el ciclo de inmediato",
+            "Pausa el programa",
+            "Salta a la siguiente vuelta",
+            "Reinicia el ciclo"
+          ],
+          "correct": 0,
+          "explanation": "continue salta a la siguiente iteración; break termina.",
+          "difficulty": 1,
+          "source": "Programación desde cero · Cap. 05 Condicionales y ciclos",
+          "sourceUrl": "https://docs.python.org/3/tutorial/controlflow.html"
+        },
+        {
+          "statement": "¿Cuál es el riesgo principal de un while?",
+          "options": [
+            "Que no acepte booleanos",
+            "Que la condición nunca cambie y el ciclo sea infinito",
+            "Que no pueda recorrer listas",
+            "Que sea más lento que for"
+          ],
+          "correct": 1,
+          "explanation": "Algo debe acercar el while a su final, actualizando el estado.",
+          "difficulty": 1,
+          "source": "Programación desde cero · Cap. 05 Condicionales y ciclos",
+          "sourceUrl": "https://docs.python.org/3/tutorial/controlflow.html"
+        },
+        {
+          "statement": "¿Qué resultado da 5 > 2 and 3 == 4?",
+          "options": [
+            "Error",
+            "True",
+            "False",
+            "None"
+          ],
+          "correct": 2,
+          "explanation": "and exige que ambas partes sean verdaderas; 3 == 4 es falso.",
+          "difficulty": 2,
+          "source": "Programación desde cero · Cap. 05 Condicionales y ciclos",
+          "sourceUrl": "https://docs.python.org/3/tutorial/controlflow.html"
+        },
+        {
+          "statement": "¿Qué devuelve una función que no tiene return explícito?",
+          "options": [
+            "0",
+            "None",
+            "Lanza un error",
+            "Una cadena vacía"
+          ],
+          "correct": 1,
+          "explanation": "Sin return, Python devuelve None.",
+          "difficulty": 1,
+          "source": "Programación desde cero · Cap. 06 Funciones y excepciones",
+          "sourceUrl": "https://docs.python.org/3/tutorial/errors.html"
+        },
+        {
+          "statement": "En calcular_area(5, 3), ¿qué son 5 y 3?",
+          "options": [
+            "Excepciones",
+            "Argumentos",
+            "Variables globales",
+            "Parámetros"
+          ],
+          "correct": 1,
+          "explanation": "Los parámetros están en la definición; los argumentos en la llamada.",
+          "difficulty": 1,
+          "source": "Programación desde cero · Cap. 06 Funciones y excepciones",
+          "sourceUrl": "https://docs.python.org/3/tutorial/errors.html"
+        },
+        {
+          "statement": "¿Por qué evitar except: sin clase?",
+          "options": [
+            "Oculta fallos que no esperabas",
+            "Impide usar finally",
+            "No funciona en Python 3",
+            "Es más lento"
+          ],
+          "correct": 0,
+          "explanation": "Captura solo lo que sabes manejar; un except genérico esconde errores de programación.",
+          "difficulty": 2,
+          "source": "Programación desde cero · Cap. 06 Funciones y excepciones",
+          "sourceUrl": "https://docs.python.org/3/tutorial/errors.html"
+        },
+        {
+          "statement": "¿Cuándo se ejecuta el bloque else de un try?",
+          "options": [
+            "Siempre",
+            "Solo si no hubo excepción",
+            "Solo si hubo excepción",
+            "Nunca"
+          ],
+          "correct": 1,
+          "explanation": "else corre si el try terminó sin excepción; finally corre siempre.",
+          "difficulty": 2,
+          "source": "Programación desde cero · Cap. 06 Funciones y excepciones",
+          "sourceUrl": "https://docs.python.org/3/tutorial/errors.html"
+        },
+        {
+          "statement": "¿Impone Python automáticamente las anotaciones de tipo como total: float?",
+          "options": [
+            "Solo en funciones",
+            "Solo con números",
+            "Sí, siempre",
+            "No, solo documentan; la validación protege las reglas"
+          ],
+          "correct": 3,
+          "explanation": "Las anotaciones comunican intención; Python no las hace cumplir en ejecución.",
+          "difficulty": 2,
+          "source": "Programación desde cero · Cap. 06 Funciones y excepciones",
+          "sourceUrl": "https://docs.python.org/3/tutorial/errors.html"
+        },
+        {
+          "statement": "¿Qué estructura conviene para evitar duplicados y preguntar pertenencia?",
+          "options": [
+            "str",
+            "list",
+            "set",
+            "tuple"
+          ],
+          "correct": 2,
+          "explanation": "El conjunto guarda elementos únicos y responde rápido a «¿está?».",
+          "difficulty": 1,
+          "source": "Programación desde cero · Cap. 07 Colecciones y mutabilidad",
+          "sourceUrl": "https://docs.python.org/3/tutorial/datastructures.html"
+        },
+        {
+          "statement": "Tras a = [1, 2]; b = a; b.append(3), ¿cuánto vale a?",
+          "options": [
+            "[3]",
+            "Error",
+            "[1, 2]",
+            "[1, 2, 3]"
+          ],
+          "correct": 3,
+          "explanation": "a y b apuntan a la misma lista; para copiar usa a.copy().",
+          "difficulty": 2,
+          "source": "Programación desde cero · Cap. 07 Colecciones y mutabilidad",
+          "sourceUrl": "https://docs.python.org/3/tutorial/datastructures.html"
+        },
+        {
+          "statement": "¿Qué devuelve persona.get(\"telefono\", \"sin teléfono\") si falta la clave?",
+          "options": [
+            "Una cadena vacía",
+            "None",
+            "KeyError",
+            "\"sin teléfono\""
+          ],
+          "correct": 3,
+          "explanation": "get permite un valor alternativo; persona[\"telefono\"] lanzaría KeyError.",
+          "difficulty": 1,
+          "source": "Programación desde cero · Cap. 07 Colecciones y mutabilidad",
+          "sourceUrl": "https://docs.python.org/3/tutorial/datastructures.html"
+        },
+        {
+          "statement": "¿Por qué [[0] * 3] * 3 da problemas al editar filas?",
+          "options": [
+            "Ordena las filas",
+            "Crea tuplas",
+            "Convierte a texto",
+            "Repite referencias a la misma lista interna"
+          ],
+          "correct": 3,
+          "explanation": "Usa [[0] * 3 for _ in range(3)] para filas independientes.",
+          "difficulty": 3,
+          "source": "Programación desde cero · Cap. 07 Colecciones y mutabilidad",
+          "sourceUrl": "https://docs.python.org/3/tutorial/datastructures.html"
+        },
+        {
+          "statement": "¿Qué pasa con texto después de ejecutar texto.strip() sin reasignar?",
+          "options": [
+            "Queda sin espacios",
+            "Lanza un error",
+            "No cambia: las cadenas son inmutables",
+            "Se vacía"
+          ],
+          "correct": 2,
+          "explanation": "Los métodos de cadena devuelven una nueva cadena; hay que guardar el resultado.",
+          "difficulty": 2,
+          "source": "Programación desde cero · Cap. 07 Colecciones y mutabilidad",
+          "sourceUrl": "https://docs.python.org/3/tutorial/datastructures.html"
+        },
+        {
+          "statement": "¿Para qué sirve if __name__ == \"__main__\":?",
+          "options": [
+            "Para no ejecutar el programa principal al importar el archivo",
+            "Para declarar variables globales",
+            "Para importar módulos más rápido",
+            "Para abrir archivos"
+          ],
+          "correct": 0,
+          "explanation": "Así el módulo puede importarse en pruebas sin lanzar el menú.",
+          "difficulty": 2,
+          "source": "Programación desde cero · Cap. 08 Módulos, archivos y JSON",
+          "sourceUrl": "https://docs.python.org/3/library/json.html"
+        },
+        {
+          "statement": "¿Qué garantiza abrir un archivo con with open(...)?",
+          "options": [
+            "Que se lea más rápido",
+            "Que se cifre",
+            "Que el archivo exista",
+            "Que se cierre aunque ocurra una excepción"
+          ],
+          "correct": 3,
+          "explanation": "El administrador de contexto cierra el recurso siempre.",
+          "difficulty": 1,
+          "source": "Programación desde cero · Cap. 08 Módulos, archivos y JSON",
+          "sourceUrl": "https://docs.python.org/3/library/json.html"
+        },
+        {
+          "statement": "¿Qué hace ensure_ascii=False en json.dump?",
+          "options": [
+            "Valida el esquema",
+            "Comprime el archivo",
+            "Ordena las claves",
+            "Conserva legibles tildes y ñ"
+          ],
+          "correct": 3,
+          "explanation": "Sin él, los caracteres no ASCII se escapan como \\uXXXX.",
+          "difficulty": 2,
+          "source": "Programación desde cero · Cap. 08 Módulos, archivos y JSON",
+          "sourceUrl": "https://docs.python.org/3/library/json.html"
+        },
+        {
+          "statement": "¿Por qué la agenda guarda el teléfono como texto?",
+          "options": [
+            "Ocupa menos",
+            "Para conservar prefijos y ceros iniciales",
+            "JSON no admite números",
+            "Para ordenarlo"
+          ],
+          "correct": 1,
+          "explanation": "Como número se perderían el + y los ceros a la izquierda.",
+          "difficulty": 1,
+          "source": "Programación desde cero · Cap. 08 Módulos, archivos y JSON",
+          "sourceUrl": "https://docs.python.org/3/library/json.html"
+        },
+        {
+          "statement": "¿Por qué guardar primero en un archivo temporal y luego reemplazar?",
+          "options": [
+            "Porque JSON lo exige",
+            "Para no dejar JSON incompleto si la escritura falla",
+            "Para tener dos copias siempre",
+            "Para que sea más rápido"
+          ],
+          "correct": 1,
+          "explanation": "El reemplazo reduce el riesgo de un archivo truncado.",
+          "difficulty": 2,
+          "source": "Programación desde cero · Cap. 08 Módulos, archivos y JSON",
+          "sourceUrl": "https://docs.python.org/3/library/json.html"
+        }
+      ]
+    },
+    {
+      "name": "Programación desde cero · Nivel 2 Desarrollo práctico",
+      "questions": [
+        {
+          "statement": "¿Qué relación expresa la composición?",
+          "options": [
+            "«hereda de»",
+            "«tiene un» o «usa un»",
+            "«es un»",
+            "«es igual a»"
+          ],
+          "correct": 1,
+          "explanation": "Una biblioteca tiene un catálogo y usa un notificador; no es ninguno de ellos.",
+          "difficulty": 1,
+          "source": "Programación desde cero · Cap. 09 Objetos que colaboran",
+          "sourceUrl": "https://docs.python.org/3/library/dataclasses.html"
+        },
+        {
+          "statement": "En una dataclass, ¿cómo se evita compartir una lista entre instancias?",
+          "options": [
+            "frozen=True",
+            "slots=True",
+            "libros: list = []",
+            "field(default_factory=list)"
+          ],
+          "correct": 3,
+          "explanation": "default_factory crea una lista nueva por objeto.",
+          "difficulty": 2,
+          "source": "Programación desde cero · Cap. 09 Objetos que colaboran",
+          "sourceUrl": "https://docs.python.org/3/library/dataclasses.html"
+        },
+        {
+          "statement": "¿Qué comunica @dataclass(frozen=True)?",
+          "options": [
+            "Que no tiene métodos",
+            "Que las instancias no deben reasignar atributos",
+            "Que la clase no se puede importar",
+            "Que es más rápida"
+          ],
+          "correct": 1,
+          "explanation": "Las instancias congeladas representan valores estables.",
+          "difficulty": 2,
+          "source": "Programación desde cero · Cap. 09 Objetos que colaboran",
+          "sourceUrl": "https://docs.python.org/3/library/dataclasses.html"
+        },
+        {
+          "statement": "¿Necesita Consola heredar de un Protocol Notificador para cumplirlo?",
+          "options": [
+            "Solo en Python 2",
+            "No, basta con tener un método compatible",
+            "Solo si es dataclass",
+            "Sí, siempre"
+          ],
+          "correct": 1,
+          "explanation": "Es tipado estructural; los analizadores lo verifican, Python no en ejecución.",
+          "difficulty": 3,
+          "source": "Programación desde cero · Cap. 09 Objetos que colaboran",
+          "sourceUrl": "https://docs.python.org/3/library/dataclasses.html"
+        },
+        {
+          "statement": "¿Qué es una invariante en un modelo?",
+          "options": [
+            "Un tipo de herencia",
+            "Un método privado",
+            "Una condición que el modelo siempre debe mantener",
+            "Una variable global"
+          ],
+          "correct": 2,
+          "explanation": "Ejemplo: un libro no puede prestarse dos veces a la vez.",
+          "difficulty": 2,
+          "source": "Programación desde cero · Cap. 09 Objetos que colaboran",
+          "sourceUrl": "https://docs.python.org/3/library/dataclasses.html"
+        },
+        {
+          "statement": "¿Qué hace yield en una función?",
+          "options": [
+            "Termina la función para siempre",
+            "Importa un módulo",
+            "Lanza una excepción",
+            "Entrega un valor y pausa conservando el estado"
+          ],
+          "correct": 3,
+          "explanation": "La función se convierte en generador y continúa tras yield en la siguiente petición.",
+          "difficulty": 1,
+          "source": "Programación desde cero · Cap. 10 Funciones y secuencias perezosas",
+          "sourceUrl": "https://docs.python.org/3/howto/functional.html"
+        },
+        {
+          "statement": "¿Qué pasa al recorrer dos veces un generador ya agotado?",
+          "options": [
+            "La segunda vez no produce elementos",
+            "Duplica los valores",
+            "Se reinicia solo",
+            "Lanza SyntaxError"
+          ],
+          "correct": 0,
+          "explanation": "Un iterador normalmente se consume una sola vez.",
+          "difficulty": 2,
+          "source": "Programación desde cero · Cap. 10 Funciones y secuencias perezosas",
+          "sourceUrl": "https://docs.python.org/3/howto/functional.html"
+        },
+        {
+          "statement": "¿Qué diferencia hay entre transformar(textos, normalizar) y transformar(textos, normalizar())?",
+          "options": [
+            "Ninguna",
+            "La primera da error",
+            "La primera pasa la función; la segunda la ejecuta en ese momento",
+            "La segunda es más rápida"
+          ],
+          "correct": 2,
+          "explanation": "Sin paréntesis se entrega la función como valor.",
+          "difficulty": 2,
+          "source": "Programación desde cero · Cap. 10 Funciones y secuencias perezosas",
+          "sourceUrl": "https://docs.python.org/3/howto/functional.html"
+        },
+        {
+          "statement": "¿Para qué sirve @wraps en un decorador?",
+          "options": [
+            "Para conservar el nombre y la documentación de la función original",
+            "Para medir tiempo",
+            "Para reintentar llamadas",
+            "Para hacerla asíncrona"
+          ],
+          "correct": 0,
+          "explanation": "functools.wraps preserva los metadatos.",
+          "difficulty": 2,
+          "source": "Programación desde cero · Cap. 10 Funciones y secuencias perezosas",
+          "sourceUrl": "https://docs.python.org/3/howto/functional.html"
+        },
+        {
+          "statement": "¿Por qué reintentar solo operaciones idempotentes?",
+          "options": [
+            "Porque repetir otras puede duplicar cobros, mensajes o escrituras",
+            "Porque no lanzan excepciones",
+            "Porque Python lo exige",
+            "Porque son más rápidas"
+          ],
+          "correct": 0,
+          "explanation": "Un decorador de reintento sobre un pago puede cobrar dos veces.",
+          "difficulty": 3,
+          "source": "Programación desde cero · Cap. 10 Funciones y secuencias perezosas",
+          "sourceUrl": "https://docs.python.org/3/howto/functional.html"
+        },
+        {
+          "statement": "¿Qué requisito tiene la búsqueda binaria?",
+          "options": [
+            "Menos de 100 elementos",
+            "Datos en un diccionario",
+            "Datos sin repetidos",
+            "Datos ordenados"
+          ],
+          "correct": 3,
+          "explanation": "Reduce el intervalo a la mitad comparando con el centro; sin orden no funciona.",
+          "difficulty": 1,
+          "source": "Programación desde cero · Cap. 11 Estructuras, búsqueda y costo",
+          "sourceUrl": "https://docs.python.org/3/library/bisect.html"
+        },
+        {
+          "statement": "¿Qué estructura usar para una cola FIFO eficiente en Python?",
+          "options": [
+            "list con pop(0)",
+            "set",
+            "collections.deque",
+            "tuple"
+          ],
+          "correct": 2,
+          "explanation": "deque agrega y quita por los extremos en O(1); pop(0) en lista es O(n).",
+          "difficulty": 2,
+          "source": "Programación desde cero · Cap. 11 Estructuras, búsqueda y costo",
+          "sourceUrl": "https://docs.python.org/3/library/bisect.html"
+        },
+        {
+          "statement": "¿Qué significa que sorted sea «estable»?",
+          "options": [
+            "Que nunca falla",
+            "Que ordena en O(1)",
+            "Que no usa memoria",
+            "Que elementos con la misma clave conservan su orden relativo"
+          ],
+          "correct": 3,
+          "explanation": "Por eso se puede ordenar por varias claves en pasos.",
+          "difficulty": 2,
+          "source": "Programación desde cero · Cap. 11 Estructuras, búsqueda y costo",
+          "sourceUrl": "https://docs.python.org/3/library/bisect.html"
+        },
+        {
+          "statement": "¿Significa O(1) que la operación es instantánea?",
+          "options": [
+            "Solo en diccionarios",
+            "No: el trabajo no crece con n de forma dominante",
+            "Sí",
+            "Solo con números"
+          ],
+          "correct": 1,
+          "explanation": "Big O describe crecimiento, no un cronómetro.",
+          "difficulty": 2,
+          "source": "Programación desde cero · Cap. 11 Estructuras, búsqueda y costo",
+          "sourceUrl": "https://docs.python.org/3/library/bisect.html"
+        },
+        {
+          "statement": "¿Qué recorrido encuentra el camino con menos aristas en un grafo sin pesos?",
+          "options": [
+            "Búsqueda en anchura (BFS)",
+            "Búsqueda lineal",
+            "Búsqueda en profundidad",
+            "Ordenamiento por inserción"
+          ],
+          "correct": 0,
+          "explanation": "BFS usa una cola y explora por distancia creciente.",
+          "difficulty": 2,
+          "source": "Programación desde cero · Cap. 11 Estructuras, búsqueda y costo",
+          "sourceUrl": "https://docs.python.org/3/library/bisect.html"
+        },
+        {
+          "statement": "Al leer una traza de Python, ¿por dónde empezar?",
+          "options": [
+            "Por la primera línea",
+            "Por el nombre del archivo",
+            "Por la última línea: tipo de excepción y mensaje",
+            "Por la mitad"
+          ],
+          "correct": 2,
+          "explanation": "Después se sube por las llamadas de tus propios archivos.",
+          "difficulty": 1,
+          "source": "Programación desde cero · Cap. 12 Depuración, pruebas y calidad",
+          "sourceUrl": "https://docs.python.org/3/library/unittest.html"
+        },
+        {
+          "statement": "¿Qué prefijo deben tener los métodos para que unittest los descubra como pruebas?",
+          "options": [
+            "prueba_",
+            "assert_",
+            "check_",
+            "test_"
+          ],
+          "correct": 3,
+          "explanation": "Los métodos que comienzan con test se ejecutan como pruebas.",
+          "difficulty": 1,
+          "source": "Programación desde cero · Cap. 12 Depuración, pruebas y calidad",
+          "sourceUrl": "https://docs.python.org/3/library/unittest.html"
+        },
+        {
+          "statement": "En la secuencia rojo-verde-mejora, ¿qué es «rojo»?",
+          "options": [
+            "Una prueba que falla por la razón correcta",
+            "Una advertencia del linter",
+            "Código sin comentarios",
+            "Un error de sintaxis"
+          ],
+          "correct": 0,
+          "explanation": "Primero la prueba falla, luego implementas lo mínimo y después mejoras.",
+          "difficulty": 2,
+          "source": "Programación desde cero · Cap. 12 Depuración, pruebas y calidad",
+          "sourceUrl": "https://docs.python.org/3/library/unittest.html"
+        },
+        {
+          "statement": "¿Qué no se debe registrar en los logs?",
+          "options": [
+            "La hora",
+            "Contraseñas y tokens",
+            "El nombre del módulo",
+            "El nivel del mensaje"
+          ],
+          "correct": 1,
+          "explanation": "Ni secretos ni datos personales innecesarios.",
+          "difficulty": 1,
+          "source": "Programación desde cero · Cap. 12 Depuración, pruebas y calidad",
+          "sourceUrl": "https://docs.python.org/3/library/unittest.html"
+        },
+        {
+          "statement": "¿Validan las anotaciones de tipo los datos que llegan por JSON?",
+          "options": [
+            "No: las fronteras externas requieren validación en ejecución",
+            "Sí",
+            "Solo con mypy instalado",
+            "Solo los enteros"
+          ],
+          "correct": 0,
+          "explanation": "Los tipos ayudan antes de ejecutar; los datos externos llegan en ejecución.",
+          "difficulty": 2,
+          "source": "Programación desde cero · Cap. 12 Depuración, pruebas y calidad",
+          "sourceUrl": "https://docs.python.org/3/library/unittest.html"
+        },
+        {
+          "statement": "¿Cómo evitar inyección SQL con sqlite3?",
+          "options": [
+            "Escapando comillas a mano",
+            "Usando marcadores ? y pasando los datos aparte",
+            "Usando LIKE",
+            "Usando f-strings"
+          ],
+          "correct": 1,
+          "explanation": "Los parámetros separan código y datos.",
+          "difficulty": 1,
+          "source": "Programación desde cero · Cap. 13 Persistencia y SQL seguro",
+          "sourceUrl": "https://docs.python.org/3/library/sqlite3.html"
+        },
+        {
+          "statement": "¿Qué debe ejecutarse en cada conexión SQLite para que las claves foráneas se comprueben?",
+          "options": [
+            "ANALYZE",
+            "PRAGMA foreign_keys = ON",
+            "VACUUM",
+            "COMMIT"
+          ],
+          "correct": 1,
+          "explanation": "SQLite no las activa por defecto.",
+          "difficulty": 2,
+          "source": "Programación desde cero · Cap. 13 Persistencia y SQL seguro",
+          "sourceUrl": "https://docs.python.org/3/library/sqlite3.html"
+        },
+        {
+          "statement": "¿Qué hace with conexion: en sqlite3?",
+          "options": [
+            "Crea la base",
+            "Confirma la transacción si no hay error y la revierte si falla",
+            "Cierra la conexión",
+            "Bloquea la tabla"
+          ],
+          "correct": 1,
+          "explanation": "Cerrar la conexión sigue siendo responsabilidad del programa.",
+          "difficulty": 3,
+          "source": "Programación desde cero · Cap. 13 Persistencia y SQL seguro",
+          "sourceUrl": "https://docs.python.org/3/library/sqlite3.html"
+        },
+        {
+          "statement": "¿Qué conserva LEFT JOIN que INNER JOIN descarta?",
+          "options": [
+            "Las filas de la izquierda sin coincidencia",
+            "Nada",
+            "Las filas duplicadas",
+            "Las filas de la derecha sin pareja"
+          ],
+          "correct": 0,
+          "explanation": "Útil para contar préstamos incluyendo socios con cero.",
+          "difficulty": 2,
+          "source": "Programación desde cero · Cap. 13 Persistencia y SQL seguro",
+          "sourceUrl": "https://docs.python.org/3/library/sqlite3.html"
+        },
+        {
+          "statement": "¿Cómo impedir más de un préstamo activo por libro desde el esquema?",
+          "options": [
+            "Con un índice único parcial WHERE devuelto_en IS NULL",
+            "Con GROUP BY",
+            "Con un comentario",
+            "Con ORDER BY"
+          ],
+          "correct": 0,
+          "explanation": "La base conserva la regla aunque dos solicitudes compitan; una recibe IntegrityError.",
+          "difficulty": 3,
+          "source": "Programación desde cero · Cap. 13 Persistencia y SQL seguro",
+          "sourceUrl": "https://docs.python.org/3/library/sqlite3.html"
+        },
+        {
+          "statement": "¿Qué hace DNS?",
+          "options": [
+            "Cifra la conexión",
+            "Comprime JSON",
+            "Traduce un nombre de host a direcciones IP",
+            "Ordena los paquetes"
+          ],
+          "correct": 2,
+          "explanation": "DNS resuelve el nombre antes de conectar.",
+          "difficulty": 1,
+          "source": "Programación desde cero · Cap. 14 Redes, HTTP y APIs",
+          "sourceUrl": "https://docs.python.org/3/library/urllib.request.html"
+        },
+        {
+          "statement": "¿Qué código HTTP indica un conflicto?",
+          "options": [
+            "201",
+            "404",
+            "409",
+            "503"
+          ],
+          "correct": 2,
+          "explanation": "409 Conflict; 404 no encontrado; 201 creado; 503 no disponible.",
+          "difficulty": 2,
+          "source": "Programación desde cero · Cap. 14 Redes, HTTP y APIs",
+          "sourceUrl": "https://docs.python.org/3/library/urllib.request.html"
+        },
+        {
+          "statement": "¿Por qué siempre pasar timeout a urlopen?",
+          "options": [
+            "Sin él, una llamada puede esperar indefinidamente",
+            "Para reintentar",
+            "Para que sea más rápido",
+            "Porque lo exige HTTPS"
+          ],
+          "correct": 0,
+          "explanation": "Toda llamada remota necesita un tiempo máximo.",
+          "difficulty": 1,
+          "source": "Programación desde cero · Cap. 14 Redes, HTTP y APIs",
+          "sourceUrl": "https://docs.python.org/3/library/urllib.request.html"
+        },
+        {
+          "statement": "¿Qué significa que PUT sea idempotente?",
+          "options": [
+            "Que es seguro de leer",
+            "Que crea recursos",
+            "Que repetirlo produce el mismo efecto deseado",
+            "Que no tiene cuerpo"
+          ],
+          "correct": 2,
+          "explanation": "Por eso un PUT puede reintentarse; un POST de pago no.",
+          "difficulty": 2,
+          "source": "Programación desde cero · Cap. 14 Redes, HTTP y APIs",
+          "sourceUrl": "https://docs.python.org/3/library/urllib.request.html"
+        },
+        {
+          "statement": "¿Qué confirma json.loads exitoso?",
+          "options": [
+            "Que el servidor es confiable",
+            "Que el tipo es application/json",
+            "Solo que la sintaxis JSON es correcta",
+            "Que los campos son válidos"
+          ],
+          "correct": 2,
+          "explanation": "Después hay que validar presencia, tipo, rango y longitud.",
+          "difficulty": 2,
+          "source": "Programación desde cero · Cap. 14 Redes, HTTP y APIs",
+          "sourceUrl": "https://docs.python.org/3/library/urllib.request.html"
+        },
+        {
+          "statement": "¿Basta la validación con JavaScript en el navegador?",
+          "options": [
+            "Sí",
+            "Solo en formularios",
+            "Solo con HTTPS",
+            "No: el servidor siempre valida de nuevo"
+          ],
+          "correct": 3,
+          "explanation": "Un atacante puede omitir el JavaScript.",
+          "difficulty": 1,
+          "source": "Programación desde cero · Cap. 15 La web de extremo a extremo",
+          "sourceUrl": "https://docs.python.org/3/library/http.server.html"
+        },
+        {
+          "statement": "¿Qué riesgo aparece al insertar texto no confiable con innerHTML?",
+          "options": [
+            "Inyección SQL",
+            "XSS",
+            "CSRF",
+            "DNS spoofing"
+          ],
+          "correct": 1,
+          "explanation": "Usa textContent para texto.",
+          "difficulty": 2,
+          "source": "Programación desde cero · Cap. 15 La web de extremo a extremo",
+          "sourceUrl": "https://docs.python.org/3/library/http.server.html"
+        },
+        {
+          "statement": "¿Qué mitiga CSRF?",
+          "options": [
+            "Desactivar HTTPS",
+            "Comprimir respuestas",
+            "Usar GET para cambios",
+            "Tokens anti-CSRF y cookies SameSite"
+          ],
+          "correct": 3,
+          "explanation": "Además, no cambiar estado mediante GET.",
+          "difficulty": 2,
+          "source": "Programación desde cero · Cap. 15 La web de extremo a extremo",
+          "sourceUrl": "https://docs.python.org/3/library/http.server.html"
+        },
+        {
+          "statement": "¿Qué implica escuchar en 127.0.0.1?",
+          "options": [
+            "Limita el acceso a la propia máquina",
+            "Expone el servidor a internet",
+            "Usa el puerto 80",
+            "Activa HTTPS"
+          ],
+          "correct": 0,
+          "explanation": "0.0.0.0 expondría en todas las interfaces.",
+          "difficulty": 1,
+          "source": "Programación desde cero · Cap. 15 La web de extremo a extremo",
+          "sourceUrl": "https://docs.python.org/3/library/http.server.html"
+        },
+        {
+          "statement": "¿Qué atributo de cookie impide que JavaScript la lea?",
+          "options": [
+            "SameSite",
+            "Secure",
+            "HttpOnly",
+            "Path"
+          ],
+          "correct": 2,
+          "explanation": "HttpOnly protege la cookie de sesión frente a scripts.",
+          "difficulty": 2,
+          "source": "Programación desde cero · Cap. 15 La web de extremo a extremo",
+          "sourceUrl": "https://docs.python.org/3/library/http.server.html"
+        },
+        {
+          "statement": "¿Qué muestra git diff --staged?",
+          "options": [
+            "Las ramas remotas",
+            "Cambios no preparados",
+            "El historial",
+            "Lo que entrará en el próximo commit"
+          ],
+          "correct": 3,
+          "explanation": "git diff sin opciones muestra lo no preparado.",
+          "difficulty": 1,
+          "source": "Programación desde cero · Cap. 16 Git y colaboración",
+          "sourceUrl": "https://git-scm.com/docs/git-diff"
+        },
+        {
+          "statement": "¿Qué es una rama en Git?",
+          "options": [
+            "Un servidor",
+            "Un nombre móvil que apunta a un commit",
+            "Una copia completa del repositorio",
+            "Un archivo de configuración"
+          ],
+          "correct": 1,
+          "explanation": "Ramas distintas comparten historia hasta el punto de separación.",
+          "difficulty": 1,
+          "source": "Programación desde cero · Cap. 16 Git y colaboración",
+          "sourceUrl": "https://git-scm.com/docs/git-diff"
+        },
+        {
+          "statement": "¿Qué riesgo tiene rebase sobre una rama compartida?",
+          "options": [
+            "Ninguno",
+            "Cambia identificadores de commits y reescribe historia ajena",
+            "Borra el repositorio",
+            "Elimina .gitignore"
+          ],
+          "correct": 1,
+          "explanation": "No reescribas una rama compartida sin acuerdo.",
+          "difficulty": 2,
+          "source": "Programación desde cero · Cap. 16 Git y colaboración",
+          "sourceUrl": "https://git-scm.com/docs/git-diff"
+        },
+        {
+          "statement": "¿Qué hacer si un secreto llegó al historial?",
+          "options": [
+            "Nada",
+            "Agregarlo a .gitignore y listo",
+            "Hacer un commit que lo borre",
+            "Revocarlo y seguir el procedimiento del equipo"
+          ],
+          "correct": 3,
+          "explanation": ".gitignore no borra lo ya publicado.",
+          "difficulty": 2,
+          "source": "Programación desde cero · Cap. 16 Git y colaboración",
+          "sourceUrl": "https://git-scm.com/docs/git-diff"
+        },
+        {
+          "statement": "En versionado semántico MAYOR.MENOR.PARCHE, ¿qué indica subir MAYOR?",
+          "options": [
+            "Una corrección",
+            "Documentación",
+            "Una función compatible",
+            "Un cambio incompatible"
+          ],
+          "correct": 3,
+          "explanation": "MENOR: función compatible; PARCHE: corrección compatible.",
+          "difficulty": 2,
+          "source": "Programación desde cero · Cap. 16 Git y colaboración",
+          "sourceUrl": "https://git-scm.com/docs/git-diff"
+        }
+      ]
+    },
+    {
+      "name": "Programación desde cero · Nivel 3 Profundización",
+      "questions": [
+        {
+          "statement": "Con monedas 1, 3 y 4, ¿cuántas usa la solución óptima para dar 6?",
+          "options": [
+            "3 (4+1+1)",
+            "6",
+            "2 (3+3)",
+            "1"
+          ],
+          "correct": 2,
+          "explanation": "El voraz elige 4+1+1; la programación dinámica halla 3+3.",
+          "difficulty": 2,
+          "source": "Programación desde cero · Cap. 17 Algoritmos avanzados",
+          "sourceUrl": "https://docs.python.org/3/library/heapq.html"
+        },
+        {
+          "statement": "¿Qué algoritmo no debe usarse con pesos negativos?",
+          "options": [
+            "Dijkstra",
+            "Merge sort",
+            "Búsqueda binaria",
+            "BFS"
+          ],
+          "correct": 0,
+          "explanation": "Dijkstra exige pesos no negativos.",
+          "difficulty": 2,
+          "source": "Programación desde cero · Cap. 17 Algoritmos avanzados",
+          "sourceUrl": "https://docs.python.org/3/library/heapq.html"
+        },
+        {
+          "statement": "¿Qué necesita toda función recursiva?",
+          "options": [
+            "Un decorador",
+            "Un bucle while",
+            "Variables globales",
+            "Un caso base y un paso que reduzca el problema"
+          ],
+          "correct": 3,
+          "explanation": "Python limita la profundidad y no optimiza la recursión de cola.",
+          "difficulty": 1,
+          "source": "Programación desde cero · Cap. 17 Algoritmos avanzados",
+          "sourceUrl": "https://docs.python.org/3/library/heapq.html"
+        },
+        {
+          "statement": "¿Qué cuatro elementos definen una solución de programación dinámica?",
+          "options": [
+            "Entrada, salida, bucle y pila",
+            "Clase, objeto, método y atributo",
+            "Lista, tupla, set y dict",
+            "Estado, transición, casos base y orden de cálculo"
+          ],
+          "correct": 3,
+          "explanation": "También se decide cómo reconstruir la solución.",
+          "difficulty": 3,
+          "source": "Programación desde cero · Cap. 17 Algoritmos avanzados",
+          "sourceUrl": "https://docs.python.org/3/library/heapq.html"
+        },
+        {
+          "statement": "En un árbol binario de búsqueda, ¿qué recorrido devuelve los valores ordenados?",
+          "options": [
+            "Inorden",
+            "Preorden",
+            "Postorden",
+            "Por niveles"
+          ],
+          "correct": 0,
+          "explanation": "Inorden: izquierda, raíz, derecha.",
+          "difficulty": 2,
+          "source": "Programación desde cero · Cap. 17 Algoritmos avanzados",
+          "sourceUrl": "https://docs.python.org/3/library/heapq.html"
+        },
+        {
+          "statement": "¿Elimina el GIL las condiciones de carrera?",
+          "options": [
+            "Solo con asyncio",
+            "No: contador += 1 sigue necesitando sincronización",
+            "Sí",
+            "Solo en hilos daemon"
+          ],
+          "correct": 1,
+          "explanation": "Leer, calcular y escribir pueden intercalarse.",
+          "difficulty": 2,
+          "source": "Programación desde cero · Cap. 18 Concurrencia",
+          "sourceUrl": "https://docs.python.org/3/library/asyncio-task.html"
+        },
+        {
+          "statement": "Para cálculo intensivo de CPU en Python puro, ¿qué conviene?",
+          "options": [
+            "Procesos",
+            "Hilos",
+            "Un while más corto",
+            "asyncio"
+          ],
+          "correct": 0,
+          "explanation": "Los procesos aprovechan varios núcleos.",
+          "difficulty": 2,
+          "source": "Programación desde cero · Cap. 18 Concurrencia",
+          "sourceUrl": "https://docs.python.org/3/library/asyncio-task.html"
+        },
+        {
+          "statement": "¿Qué error se comete al usar time.sleep dentro de una corrutina?",
+          "options": [
+            "Bloquea el bucle de eventos y congela las demás tareas",
+            "Duplica la espera",
+            "Ninguno",
+            "Lanza SyntaxError"
+          ],
+          "correct": 0,
+          "explanation": "Usa await asyncio.sleep.",
+          "difficulty": 2,
+          "source": "Programación desde cero · Cap. 18 Concurrencia",
+          "sourceUrl": "https://docs.python.org/3/library/asyncio-task.html"
+        },
+        {
+          "statement": "¿Qué aporta una cola acotada (maxsize)?",
+          "options": [
+            "Cifrado",
+            "Más velocidad",
+            "Presión inversa: los productores esperan y la memoria no crece sin límite",
+            "Orden alfabético"
+          ],
+          "correct": 2,
+          "explanation": "Evita acumular trabajo sin límite.",
+          "difficulty": 2,
+          "source": "Programación desde cero · Cap. 18 Concurrencia",
+          "sourceUrl": "https://docs.python.org/3/library/asyncio-task.html"
+        },
+        {
+          "statement": "¿Qué ofrece asyncio.TaskGroup (Python 3.11)?",
+          "options": [
+            "Hilos más livianos",
+            "Concurrencia estructurada: si una tarea falla, cancela a las hermanas",
+            "Paralelismo real en varios núcleos",
+            "Un servidor web"
+          ],
+          "correct": 1,
+          "explanation": "Al salir del bloque, todas las tareas terminaron.",
+          "difficulty": 3,
+          "source": "Programación desde cero · Cap. 18 Concurrencia",
+          "sourceUrl": "https://docs.python.org/3/library/asyncio-task.html"
+        },
+        {
+          "statement": "¿Qué pide realmente la responsabilidad única?",
+          "options": [
+            "Sin herencia",
+            "Menos de 50 líneas",
+            "Una clase por método",
+            "Un motivo principal de cambio"
+          ],
+          "correct": 3,
+          "explanation": "No es cantidad de archivos sino cohesión.",
+          "difficulty": 2,
+          "source": "Programación desde cero · Cap. 19 Diseño y arquitectura",
+          "sourceUrl": "https://docs.python.org/3/library/typing.html#typing.Protocol"
+        },
+        {
+          "statement": "¿Qué patrón traduce la interfaz de un proveedor externo a un puerto interno?",
+          "options": [
+            "Factory",
+            "Adapter",
+            "Strategy",
+            "Observer"
+          ],
+          "correct": 1,
+          "explanation": "Adapter traduce una interfaz a otra.",
+          "difficulty": 1,
+          "source": "Programación desde cero · Cap. 19 Diseño y arquitectura",
+          "sourceUrl": "https://docs.python.org/3/library/typing.html#typing.Protocol"
+        },
+        {
+          "statement": "En arquitectura hexagonal, ¿hacia dónde apuntan las dependencias?",
+          "options": [
+            "Del dominio hacia la base de datos",
+            "No hay dependencias",
+            "Hacia los contratos del núcleo",
+            "Hacia la interfaz web"
+          ],
+          "correct": 2,
+          "explanation": "La infraestructura depende de puertos definidos cerca del dominio.",
+          "difficulty": 2,
+          "source": "Programación desde cero · Cap. 19 Diseño y arquitectura",
+          "sourceUrl": "https://docs.python.org/3/library/typing.html#typing.Protocol"
+        },
+        {
+          "statement": "¿Cuál es un cambio de API potencialmente incompatible?",
+          "options": [
+            "Mejorar la documentación",
+            "Agregar un ejemplo",
+            "Agregar un campo opcional",
+            "Volver obligatorio un campo opcional"
+          ],
+          "correct": 3,
+          "explanation": "También eliminar campos o cambiar unidades.",
+          "difficulty": 2,
+          "source": "Programación desde cero · Cap. 19 Diseño y arquitectura",
+          "sourceUrl": "https://docs.python.org/3/library/typing.html#typing.Protocol"
+        },
+        {
+          "statement": "¿Qué exige la sustitución de Liskov?",
+          "options": [
+            "Que las subclases sean más rápidas",
+            "Prohibir excepciones",
+            "Que un reemplazo conserve las expectativas observables",
+            "Usar siempre herencia"
+          ],
+          "correct": 2,
+          "explanation": "Una subclase que rechaza entradas antes válidas rompe el contrato.",
+          "difficulty": 3,
+          "source": "Programación desde cero · Cap. 19 Diseño y arquitectura",
+          "sourceUrl": "https://docs.python.org/3/library/typing.html#typing.Protocol"
+        },
+        {
+          "statement": "¿Qué diferencia autenticación de autorización?",
+          "options": [
+            "La autorización va primero",
+            "Son lo mismo",
+            "La autenticación solo usa contraseñas",
+            "Autenticar dice quién eres; autorizar, qué puedes hacer con un recurso"
+          ],
+          "correct": 3,
+          "explanation": "Un usuario autenticado aún necesita permiso sobre el documento.",
+          "difficulty": 1,
+          "source": "Programación desde cero · Cap. 20 Seguridad y privacidad",
+          "sourceUrl": "https://docs.python.org/3/library/hashlib.html#hashlib.pbkdf2_hmac"
+        },
+        {
+          "statement": "¿Cómo deben almacenarse las contraseñas?",
+          "options": [
+            "Con una función derivadora lenta y sal aleatoria por registro",
+            "En texto claro en una tabla privada",
+            "Cifradas para poder recuperarlas",
+            "Con SHA-256 solo"
+          ],
+          "correct": 0,
+          "explanation": "Ejemplo didáctico: PBKDF2 con hmac.compare_digest.",
+          "difficulty": 2,
+          "source": "Programación desde cero · Cap. 20 Seguridad y privacidad",
+          "sourceUrl": "https://docs.python.org/3/library/hashlib.html#hashlib.pbkdf2_hmac"
+        },
+        {
+          "statement": "¿Es secreta la sal de una contraseña?",
+          "options": [
+            "Sí, debe ocultarse",
+            "Se descarta",
+            "Solo en producción",
+            "No: puede guardarse junto al hash"
+          ],
+          "correct": 3,
+          "explanation": "Evita hashes iguales para contraseñas iguales y tablas precalculadas.",
+          "difficulty": 2,
+          "source": "Programación desde cero · Cap. 20 Seguridad y privacidad",
+          "sourceUrl": "https://docs.python.org/3/library/hashlib.html#hashlib.pbkdf2_hmac"
+        },
+        {
+          "statement": "¿Cómo ejecutar un proceso externo de forma segura?",
+          "options": [
+            "subprocess.run con shell=True",
+            "os.system con f-string",
+            "subprocess.run con lista de argumentos, sin shell y con timeout",
+            "eval"
+          ],
+          "correct": 2,
+          "explanation": "Se evita interpolar comandos.",
+          "difficulty": 2,
+          "source": "Programación desde cero · Cap. 20 Seguridad y privacidad",
+          "sourceUrl": "https://docs.python.org/3/library/hashlib.html#hashlib.pbkdf2_hmac"
+        },
+        {
+          "statement": "Ocultar un botón en la interfaz, ¿protege el endpoint?",
+          "options": [
+            "Solo en móviles",
+            "Solo con HTTPS",
+            "No: la autorización se comprueba en el servidor",
+            "Sí"
+          ],
+          "correct": 2,
+          "explanation": "La protección real está en cada operación sensible del servidor.",
+          "difficulty": 1,
+          "source": "Programación desde cero · Cap. 20 Seguridad y privacidad",
+          "sourceUrl": "https://docs.python.org/3/library/hashlib.html#hashlib.pbkdf2_hmac"
+        },
+        {
+          "statement": "¿Qué garantía obliga a que los consumidores toleren duplicados?",
+          "options": [
+            "Exactamente una vez",
+            "A lo sumo una vez",
+            "Sin garantía",
+            "Al menos una vez"
+          ],
+          "correct": 3,
+          "explanation": "El consumidor debe ser idempotente.",
+          "difficulty": 2,
+          "source": "Programación desde cero · Cap. 21 Sistemas distribuidos"
+        },
+        {
+          "statement": "¿Por qué un tiempo límite no basta para reintentar una creación?",
+          "options": [
+            "Porque es muy corto",
+            "Porque bloquea la red",
+            "Porque HTTP no lo permite",
+            "Porque el servidor pudo completarla aunque se perdiera la respuesta"
+          ],
+          "correct": 3,
+          "explanation": "Hace falta una clave de idempotencia.",
+          "difficulty": 2,
+          "source": "Programación desde cero · Cap. 21 Sistemas distribuidos"
+        },
+        {
+          "statement": "¿Qué hace un cortacircuito al superar el límite de fallos?",
+          "options": [
+            "Reintenta más rápido",
+            "Se abre y rechaza rápido para dejar recuperarse al servicio",
+            "Borra la caché",
+            "Apaga el servidor"
+          ],
+          "correct": 1,
+          "explanation": "Más tarde admite una prueba controlada.",
+          "difficulty": 2,
+          "source": "Programación desde cero · Cap. 21 Sistemas distribuidos"
+        },
+        {
+          "statement": "¿Qué garantiza un TTL en una caché?",
+          "options": [
+            "Frescura total",
+            "Consistencia fuerte",
+            "Solo limita la antigüedad del dato",
+            "Que nunca falle"
+          ],
+          "correct": 2,
+          "explanation": "TTL no equivale a consistencia.",
+          "difficulty": 2,
+          "source": "Programación desde cero · Cap. 21 Sistemas distribuidos"
+        },
+        {
+          "statement": "¿Cuándo confirmar un mensaje de una cola?",
+          "options": [
+            "Nunca",
+            "Al recibirlo",
+            "Después de persistir su efecto",
+            "Antes de procesarlo"
+          ],
+          "correct": 2,
+          "explanation": "Confirmar antes puede perder el efecto si el trabajador falla.",
+          "difficulty": 3,
+          "source": "Programación desde cero · Cap. 21 Sistemas distribuidos"
+        },
+        {
+          "statement": "¿Qué diferencia esencial hay entre contenedor y máquina virtual?",
+          "options": [
+            "El contenedor comparte el núcleo del host; la VM ejecuta un sistema invitado",
+            "La VM es más liviana",
+            "Ninguna",
+            "El contenedor necesita su propio kernel"
+          ],
+          "correct": 0,
+          "explanation": "Son fronteras de aislamiento distintas.",
+          "difficulty": 2,
+          "source": "Programación desde cero · Cap. 22 Del sistema operativo a la nube",
+          "sourceUrl": "https://docs.python.org/3/library/dis.html"
+        },
+        {
+          "statement": "¿Por qué Python puede describirse como compilado e interpretado?",
+          "options": [
+            "Porque usa C",
+            "No puede",
+            "Porque tiene REPL",
+            "Se compila a bytecode y luego un runtime lo ejecuta"
+          ],
+          "correct": 3,
+          "explanation": "Las etapas no son excluyentes; dis muestra el bytecode.",
+          "difficulty": 2,
+          "source": "Programación desde cero · Cap. 22 Del sistema operativo a la nube",
+          "sourceUrl": "https://docs.python.org/3/library/dis.html"
+        },
+        {
+          "statement": "¿Qué es escalado horizontal?",
+          "options": [
+            "Aumentar la RAM de una instancia",
+            "Comprimir datos",
+            "Reducir el código",
+            "Agregar instancias"
+          ],
+          "correct": 3,
+          "explanation": "Obliga a pensar dónde vive el estado.",
+          "difficulty": 1,
+          "source": "Programación desde cero · Cap. 22 Del sistema operativo a la nube",
+          "sourceUrl": "https://docs.python.org/3/library/dis.html"
+        },
+        {
+          "statement": "¿Por qué promover el mismo artefacto entre entornos?",
+          "options": [
+            "Porque es más rápido de compilar",
+            "Por licencia",
+            "Para que lo probado sea exactamente lo publicado",
+            "Para ahorrar disco"
+          ],
+          "correct": 2,
+          "explanation": "Mejora la trazabilidad.",
+          "difficulty": 2,
+          "source": "Programación desde cero · Cap. 22 Del sistema operativo a la nube",
+          "sourceUrl": "https://docs.python.org/3/library/dis.html"
+        },
+        {
+          "statement": "¿Revierte datos una reversión de código?",
+          "options": [
+            "No: las migraciones de datos no se deshacen solas",
+            "Sí, siempre",
+            "Solo con contenedores",
+            "Solo en la nube"
+          ],
+          "correct": 0,
+          "explanation": "Los cambios de esquema deben admitir periodos compatibles.",
+          "difficulty": 3,
+          "source": "Programación desde cero · Cap. 22 Del sistema operativo a la nube",
+          "sourceUrl": "https://docs.python.org/3/library/dis.html"
+        },
+        {
+          "statement": "¿Qué medida de centro resiste mejor los valores extremos?",
+          "options": [
+            "Media",
+            "Mediana",
+            "Varianza",
+            "Suma"
+          ],
+          "correct": 1,
+          "explanation": "La mediana usa el orden; la media reacciona a extremos.",
+          "difficulty": 1,
+          "source": "Programación desde cero · Cap. 23 Datos, ML e IA generativa",
+          "sourceUrl": "https://docs.python.org/3/library/statistics.html"
+        },
+        {
+          "statement": "¿Demuestra la correlación causalidad?",
+          "options": [
+            "No",
+            "Solo si es mayor a 0.9",
+            "Solo con muchos datos",
+            "Sí"
+          ],
+          "correct": 0,
+          "explanation": "Variables omitidas o causalidad inversa pueden explicar el patrón.",
+          "difficulty": 1,
+          "source": "Programación desde cero · Cap. 23 Datos, ML e IA generativa",
+          "sourceUrl": "https://docs.python.org/3/library/statistics.html"
+        },
+        {
+          "statement": "¿Por qué separar validación y prueba?",
+          "options": [
+            "Para entrenar más rápido",
+            "Por costumbre",
+            "Validación guía elecciones; prueba estima generalización sin contaminarse",
+            "Porque son iguales"
+          ],
+          "correct": 2,
+          "explanation": "Consultar la prueba repetidamente la convierte en validación.",
+          "difficulty": 2,
+          "source": "Programación desde cero · Cap. 23 Datos, ML e IA generativa",
+          "sourceUrl": "https://docs.python.org/3/library/statistics.html"
+        },
+        {
+          "statement": "Si omitir un positivo es muy costoso, ¿qué métrica priorizar?",
+          "options": [
+            "Exactitud",
+            "Precisión",
+            "Exhaustividad (recall)",
+            "Latencia"
+          ],
+          "correct": 2,
+          "explanation": "Sin olvidar el costo de los falsos positivos.",
+          "difficulty": 2,
+          "source": "Programación desde cero · Cap. 23 Datos, ML e IA generativa",
+          "sourceUrl": "https://docs.python.org/3/library/statistics.html"
+        },
+        {
+          "statement": "¿Qué hace conceptualmente una neurona artificial?",
+          "options": [
+            "Combina entradas con pesos y sesgo y aplica una función no lineal",
+            "Guarda datos",
+            "Traduce texto",
+            "Ordena listas"
+          ],
+          "correct": 0,
+          "explanation": "Capas encadenadas forman una red.",
+          "difficulty": 2,
+          "source": "Programación desde cero · Cap. 23 Datos, ML e IA generativa",
+          "sourceUrl": "https://docs.python.org/3/library/statistics.html"
+        },
+        {
+          "statement": "¿Por qué el archivo temporal debe estar en el mismo directorio que el destino?",
+          "options": [
+            "Por permisos",
+            "Por orden",
+            "El reemplazo atómico requiere el mismo sistema de archivos",
+            "Para ahorrar espacio"
+          ],
+          "correct": 2,
+          "explanation": "Evita una copia parcial entre volúmenes.",
+          "difficulty": 2,
+          "source": "Programación desde cero · Cap. 24 Proyecto profesional",
+          "sourceUrl": "https://docs.python.org/3/library/os.html#os.replace"
+        },
+        {
+          "statement": "Si un prefijo coincide con dos tareas, ¿qué debe hacer completar?",
+          "options": [
+            "Completar la más antigua",
+            "Completar ambas",
+            "Borrar ambas",
+            "Rechazarlo sin modificar datos"
+          ],
+          "correct": 3,
+          "explanation": "Cero o varias coincidencias producen error.",
+          "difficulty": 1,
+          "source": "Programación desde cero · Cap. 24 Proyecto profesional",
+          "sourceUrl": "https://docs.python.org/3/library/os.html#os.replace"
+        },
+        {
+          "statement": "¿Qué cambiaría primero para soportar dos escritores concurrentes?",
+          "options": [
+            "Un archivo JSON más grande",
+            "Una base transaccional o un bloqueo bien definido",
+            "Más RAM",
+            "Un contenedor"
+          ],
+          "correct": 1,
+          "explanation": "La escritura atómica no coordina procesos.",
+          "difficulty": 2,
+          "source": "Programación desde cero · Cap. 24 Proyecto profesional",
+          "sourceUrl": "https://docs.python.org/3/library/os.html#os.replace"
+        },
+        {
+          "statement": "¿Qué incluye una buena prueba de extremo a extremo de la CLI?",
+          "options": [
+            "Ejecutar agregar y listar y verificar salida y código de retorno",
+            "Medir la CPU",
+            "Solo leer el código",
+            "Revisar el README"
+          ],
+          "correct": 0,
+          "explanation": "Usa un directorio temporal.",
+          "difficulty": 2,
+          "source": "Programación desde cero · Cap. 24 Proyecto profesional",
+          "sourceUrl": "https://docs.python.org/3/library/os.html#os.replace"
+        },
+        {
+          "statement": "¿Sustituye la escritura atómica a los respaldos?",
+          "options": [
+            "Solo en Windows",
+            "No: protege una transición, no reemplaza copias verificadas",
+            "Sí",
+            "Solo con UUID"
+          ],
+          "correct": 1,
+          "explanation": "Las copias deben probar su restauración.",
+          "difficulty": 1,
+          "source": "Programación desde cero · Cap. 24 Proyecto profesional",
+          "sourceUrl": "https://docs.python.org/3/library/os.html#os.replace"
+        }
+      ]
+    }
+  ]
+}
